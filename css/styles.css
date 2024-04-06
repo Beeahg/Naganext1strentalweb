@@ -11162,6 +11162,6 @@ footer a:hover, footer a:active, footer a:focus {
 }
   /* Custom styles */
 .datetime-container {
-  position: static;
+  position: relative;
   overflow: visible !important;
 }
