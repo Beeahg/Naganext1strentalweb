@@ -30,5 +30,8 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+	
+  //khởi tạo DateTimePicker 
+	$('#datetimepicker').datetimepicker();
 
 });
