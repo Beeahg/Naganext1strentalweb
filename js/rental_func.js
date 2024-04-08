@@ -6,14 +6,14 @@ function tinhToanGiaThue() {
 }
 
 /* CSS để thêm vào file style của bạn liên quan button */
-.btn-green {
+.btnH-green {
   background-color: #28a745 !important; /* Màu xanh lá cho nút */
   color: white !important; /* Màu chữ trắng */
   border: 1px solid #28a745 !important; /* Đặt màu viền giống màu nền */
 }
 
 /* Thêm hiệu ứng khi hover nếu bạn muốn */
-.btn-green:hover {
+.btnH-green:hover {
   background-color: #218838; /* Màu xanh đậm hơn khi hover */
   border-color: #1e7e34; /* Màu viền đậm hơn khi hover */
 }
