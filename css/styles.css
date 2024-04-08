@@ -11165,3 +11165,8 @@ footer a:hover, footer a:active, footer a:focus {
   position: relative;
   overflow: visible !important;
 }
+
+/* Custom styles */
+.masthead h1 {
+    font-size: 24px; /* Điều chỉnh cỡ chữ của tiêu đề h1 trong .masthead */
+}
