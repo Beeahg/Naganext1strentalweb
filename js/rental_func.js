@@ -1,4 +1,14 @@
 
+document.addEventListener('DOMContentLoaded', function () {
+  var calculateButton = document.getElementById('calculateButton');
+  calculateButton.addEventListener('click', tinhToanGiaThue);
+});
+
+function tinhToanGiaThue(event) {
+  event.preventDefault();
+  // Các đoạn mã tính toán ở đây
+}
+
 function tinhToanGiaThue(event) {
    event.preventDefault(); // Ngăn chặn hành động mặc định của form mỗi khi thực hiện hàm qua nhấn nút tính toán
     
