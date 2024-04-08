@@ -11184,3 +11184,17 @@ footer a:hover, footer a:active, footer a:focus {
   border-color: #1e7e34; /* Màu viền đậm hơn khi hover */
 }
 
+.border-container {
+    border: 1px solid #ddd; /* Thay đổi màu viền theo ý bạn */
+    padding: 15px;
+    margin-top: 20px; /* Khoảng cách phía trên nếu cần */
+}
+
+.text-container {
+    position: absolute; /* Đặt phần tử này trên phần tử khác */
+    top: 50px; /* Khoảng cách từ đỉnh */
+    left: 50px; /* Khoảng cách từ trái */
+    color: red; /* Màu chữ */
+    font-size: 20px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm chữ */
+}
