@@ -30,9 +30,9 @@ function tinhToanGiaThue(event) {
 
 function capNhatLabel() {
   var kyHanThue = document.getElementById('kyHanThue').value; // Lấy giá trị được chọn
-  var labelo1 = document.getElementById('tuyChonLabel');
+  var labelo1 = document.getElementById('tuyChonLabel1');
   labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue; // Cập nhật nội dung label option 1
-  var labelo2 = document.getElementById('tuyChonLabel');
+  var labelo2 = document.getElementById('tuyChonLabel2');
   labelo1.textContent = "TÙY CHỌN 2: TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue; // Cập nhật nội dung label option 1
   
 }
