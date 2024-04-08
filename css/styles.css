@@ -11183,3 +11183,11 @@ footer a:hover, footer a:active, footer a:focus {
   background-color: #218838; /* Màu xanh đậm hơn khi hover */
   border-color: #1e7e34; /* Màu viền đậm hơn khi hover */
 }
+
+.info-container {
+  border: 1px solid #ccc; /* đường viền xung quanh */
+  padding: 15px; /* padding bên trong */
+  margin-top: 20px; /* khoảng cách so với phần tử phía trên */
+  background-color: #f9f9f9; /* màu nền cho khung */
+  border-radius: 5px; /* bo góc cho khung */
+}
