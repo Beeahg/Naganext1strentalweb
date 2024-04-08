@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function tinhToanGiaThue(event) {
-  event.preventDefault();
-  // Các đoạn mã tính toán ở đây
-}
-
-function tinhToanGiaThue(event) {
    event.preventDefault(); // Ngăn chặn hành động mặc định của form mỗi khi thực hiện hàm qua nhấn nút tính toán
     
     // Giả sử giaMua là số, bạn phải chuyển giá trị từ chuỗi sang số
@@ -17,6 +12,7 @@ function tinhToanGiaThue(event) {
 	// gia su so luong là so 
 	var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
 	//Gia su so thang thue la so 
+	 var kyHanThue = document.getElementById('kyHanThue').value;
 	
     
     // Giả sử bạn có các phép tính như sau:
@@ -37,11 +33,10 @@ function tinhToanGiaThue(event) {
     document.getElementById('tongGiaThueo2').value = tongGiaThueo2;
 	
 	// Đừng quên gọi capNhatLabel() để cập nhật nhãn
-  capNhatLabel();
+   capNhatLabel(kyHanThue);
  }
 
 function capNhatLabel() {
-  var kyHanThue = document.getElementById('productInput3').value; // Lấy giá trị được chọn (1, 2, 3)
   var labelo1 = document.getElementById('tuyChonLabel1');
   var labelo2 = document.getElementById('tuyChonLabel2');
    
