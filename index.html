@@ -241,17 +241,22 @@
                             <!-- Add more options here -->
                         </select>
 						<label for="productInput1" class="form-label">Số lượng sản phẩm bạn muốn thuê</label>
-						<input type="text" class="form-control" placeholder="Số lượng sản phẩm">
+						<input type="text"  id="soLuongDuKien" class="form-control" placeholder="Số lượng sản phẩm">
 						
 						<label for="productInput2" class="form-label">Giá mua vào dự kiến</label>
-						<input type="text"id="giaMuaDuKien" class="form-control" placeholder="Giá mua vào">
+						<input type="text" id="giaMuaDuKien" class="form-control" placeholder="Giá mua vào">
+						
+						<label id="tuyChonLabel" for="kyHanThueo1">TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</label>
+						<label id="tuyChonLabe2" for="kyHanThueo2">TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</label>
 						
 						<label for="productInput3" class="form-label">Kỳ hạn thuê muốn thuê</label>
 						<select class="form-select" id="productInput3">
                             <option selected>Chọn kỳ hạn thuê của Naganext bạn nhé...</option>
-                            <option value="1">Thuê trong 24 tháng</option>
-                            <option value="2">Thuê trong 36 tháng</option>
-							<option value="3">Thuê trong 48 tháng</option>
+								<select id="kyHanThue" onchange="capNhatLabel()">
+									<option value="1">Thuê trong 24 tháng</option>
+									<option value="2">Thuê trong 36 tháng</option>
+									<option value="3">Thuê trong 48 tháng</option>
+								</select>
 						</select>	 
 					</div>
 					<div>

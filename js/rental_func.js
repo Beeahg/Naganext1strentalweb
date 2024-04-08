@@ -4,6 +4,10 @@ function tinhToanGiaThue(event) {
     
     // Giả sử giaMua là số, bạn phải chuyển giá trị từ chuỗi sang số
     var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value);
+	// gia su so luong là so 
+	var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
+	//Gia su so thang thue la so 
+	
     
     // Giả sử bạn có các phép tính như sau:
     var donGiaThue = giaMua + 1000; // Thêm 1000 vào giá mua
@@ -24,3 +28,11 @@ function tinhToanGiaThue(event) {
 	
  }
 
+function capNhatLabel() {
+  var kyHanThue = document.getElementById('kyHanThue').value; // Lấy giá trị được chọn
+  var labelo1 = document.getElementById('tuyChonLabel');
+  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue; // Cập nhật nội dung label option 1
+  var labelo2 = document.getElementById('tuyChonLabel');
+  labelo1.textContent = "TÙY CHỌN 2: TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue; // Cập nhật nội dung label option 1
+  
+}
