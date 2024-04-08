@@ -248,26 +248,12 @@
 						
 				
 						<label for="productInput3" class="form-label">Kỳ hạn thuê muốn thuê</label>
-						<select class="form-select" id="productInput3">
+						<select class="form-select" id="productInput3" onchange="capNhatLabel()">
                             <option selected>Chọn kỳ hạn thuê của Naganext bạn nhé...</option>
 									<option value="1">Thuê trong 24 tháng</option>
 									<option value="2">Thuê trong 36 tháng</option>
 									<option value="3">Thuê trong 48 tháng</option>
 						</select>	 
-						
-						<label id="tuyChonLabel1" for="kyHanThueo1">TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</label>
-						<select id="kyHanThueo1" onchange="capNhatLabel()">
-									<option value="1">Thuê trong 24 tháng</option>
-									<option value="2">Thuê trong 36 tháng</option>
-									<option value="3">Thuê trong 48 tháng</option>
-								</select>
-						<label id="tuyChonLabel2" for="kyHanThueo2">TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</label>
-						<select id="kyHanThueo2" onchange="capNhatLabel()">
-									<option value="1">Thuê trong 24 tháng</option>
-									<option value="2">Thuê trong 36 tháng</option>
-									<option value="3">Thuê trong 48 tháng</option>
-								</select>
-						
 						
 					</div>
 					<div>
@@ -289,7 +275,7 @@
 									<label for="tongGiaThueMualai" class="form-label">Tổng giá thuê và mua lại máy</label>
 									<input type="text" id="tongGiaThueMualai" class="form-control">
 								</div>
-								<label for="productInput4" class="form-label">TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</label>
+								<label for="productInput4" class="form-label">TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</label> 
 								<div class="col-sm-8 col-md-6">
 									<label for="donGiaThueo2" class="form-label">Đơn giá thuê trên 1 tháng</label>
 									<input type="text" id="donGiaThueo2" class="form-control">
