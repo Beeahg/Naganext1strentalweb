@@ -11191,3 +11191,16 @@ footer a:hover, footer a:active, footer a:focus {
   background-color: #f9f9f9; /* màu nền cho khung */
   border-radius: 5px; /* bo góc cho khung */
 }
+
+#ketQuaTinhToan.hidden {
+  display: none; /* Ẩn kết quả khi chưa thực hiện tính toán */
+}
+
+#ketQuaTinhToan {
+  /* Định dạng cho kết quả, ví dụ: */
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+}
