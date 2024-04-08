@@ -7,7 +7,7 @@ function tinhToanGiaThue(event) {
 	var donGiaThue = document.getElementById('giaMuaDuKien').value + 1;
     document.getElementById('donGiaThue').value = giaMua;
 	
-	 var tongGiamualai = document.getElementById('giaMuaDuKien').value+2;
+	var tongGiamualai = document.getElementById('giaMuaDuKien').value+2;
     document.getElementById('tongGiamualai').value = giaMua;
 	
 	var tongGiaThueMualai = document.getElementById('giaMuaDuKien').value+3;

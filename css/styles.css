@@ -11171,6 +11171,10 @@ footer a:hover, footer a:active, footer a:focus {
     font-size: 40px; /* Điều chỉnh cỡ chữ của tiêu đề h1 trong .masthead */
 }
 
+.custom-heading {
+    font-size: 36px; /* hoặc bất kỳ kích cỡ nào bạn muốn */
+}
+
 /* CSS để thêm vào file style của bạn liên quan button */
 .btnH-green {
   background-color: #28a745 !important;  /* Màu xanh lá cho nút */
