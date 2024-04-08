@@ -26,6 +26,8 @@ function tinhToanGiaThue(event) {
     document.getElementById('donGiaThueo2').value = donGiaThueo2;
     document.getElementById('tongGiaThueo2').value = tongGiaThueo2;
 	
+	// Đừng quên gọi capNhatLabel() để cập nhật nhãn
+  capNhatLabel();
  }
 
 function capNhatLabel() {
