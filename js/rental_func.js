@@ -23,12 +23,25 @@ function tinhToanGiaThue(event) {
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
   
-  var donGiaThueo1 = giaMua * soLuong + 1000;
-  var tongGiamualai = giaMua * soLuong + 2000;
-  var tongGiaThueMualai = giaMua * soLuong + 3000;
+  //var kyHanThueSelect = document.getElementById('kyHanThue');
+  //var selectedOption = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
+  //var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
   
-  var donGiaThueo2 = giaMua * soLuong + 4000;
-  var tongGiaThueo2 = giaMua * soLuong + 5000;
+  var kyHanThueSelect = document.getElementById('kyHanThue');
+  if (!kyHanThueSelect.selectedIndex) {
+    alert('Vui lòng chọn kỳ hạn thuê.');
+    return;
+  }
+  var selectedOption = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
+  var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
+  
+
+  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
+  var tongGiamualai = giaMua * soLuong*0.13;
+  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+  
+  var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
+  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
   
   document.getElementById('donGiaThueo1').value = donGiaThueo1.toFixed(2);
   document.getElementById('tongGiamualai').value = tongGiamualai.toFixed(2);
@@ -42,6 +55,8 @@ function tinhToanGiaThue(event) {
 
 function capNhatLabel() {
   console.log('Cập nhật label được gọi');
+  console.log('Trước khi cập nhật labelo1:', document.getElementById('tuyChonLabel1'));
+  console.log('Trước khi cập nhật labelo2:', document.getElementById('tuyChonLabel2'));
   // Your label update logic...
     var kyHanThueSelect = document.getElementById('kyHanThue');
     if (kyHanThueSelect) {
@@ -58,5 +73,7 @@ function capNhatLabel() {
     } else {
         console.error('kyHanThue select not found in capNhatLabel');
     }
+	console.log('Sau khi cập nhật labelo1:', document.getElementById('tuyChonLabel1'));
+	console.log('Sau khi cập nhật labelo2:', document.getElementById('tuyChonLabel2'));
 }
 
