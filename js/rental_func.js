@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var calculateButton = document.getElementById('calculateButton');
   calculateButton.addEventListener('click', function(event) {
     tinhToanGiaThue(event);
-    //capNhatLabel();
   });
 });
 
@@ -25,12 +24,13 @@ function tinhToanGiaThue(event) {
 }
 
 function capNhatLabel() {
-  var kyHanThueSelect = document.getElementById('kyHanThue');
-  var kyHanThue = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
+   var kyHanThue = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
+   var kyHanThueSelect = document.getElementById('kyHanThue');
+
 
   var labelo1 = document.getElementById('tuyChonLabel1');
   var labelo2 = document.getElementById('tuyChonLabel2');
 
-  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue;
-  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue;
+  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThueSelect;
+  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThueSelect;
 }
