@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-     var calculateButton = document.getElementById('calculateButton');
+    var calculateButton = document.getElementById('calculateButton');
+    var kyHanThueSelect = document.getElementById('kyHanThue');
+
     if (calculateButton) {
         calculateButton.addEventListener('click', tinhToanGiaThue);
     } else {
         console.error('Calculate button not found');
+    }
+
+    if (kyHanThueSelect) {
+        kyHanThueSelect.addEventListener('change', capNhatLabel);
+    } else {
+        console.error('kyHanThue select not found');
     }
 });
 
@@ -34,13 +42,21 @@ function tinhToanGiaThue(event) {
 
 function capNhatLabel() {
   console.log('Cập nhật label được gọi');
-  var kyHanThueSelect = document.getElementById('kyHanThue');
-  var kyHanThue = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
-  
-  var labelo1 = document.getElementById('tuyChonLabel1');
-  var labelo2 = document.getElementById('tuyChonLabel2');
-  
-  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ test "; //+ kyHanThue;
-  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT test op2 "; //+ kyHanThue;
+  // Your label update logic...
+    var kyHanThueSelect = document.getElementById('kyHanThue');
+    if (kyHanThueSelect) {
+        var kyHanThue = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
+        var labelo1 = document.getElementById('tuyChonLabel1');
+        var labelo2 = document.getElementById('tuyChonLabel2');
+
+        if (labelo1 && labelo2) {
+            labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue;
+            labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue;
+        } else {
+            console.error('One or more labels not found');
+        }
+    } else {
+        console.error('kyHanThue select not found in capNhatLabel');
+    }
 }
 
