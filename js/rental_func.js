@@ -10,7 +10,7 @@ function tinhToanGiaThue(event) {
 
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
-  var kyHan = document.getElementById('kyHanThue').value);
+  var kyHan = document.getElementById('kyHanThue').value;
 
   var donGiaThueo1 = giaMua * soLuong + 1000;
   var tongGiamualai = giaMua * soLuong + 2000;
