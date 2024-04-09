@@ -31,6 +31,6 @@ function capNhatLabel() {
   var labelo1 = document.getElementById('tuyChonLabel1');
   var labelo2 = document.getElementById('tuyChonLabel2');
 
-  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThueSelect;
-  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThueSelect;
+  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue;
+  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue;
 }
