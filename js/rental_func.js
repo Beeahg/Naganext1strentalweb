@@ -25,7 +25,7 @@ function tinhToanGiaThue(event) {
   document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(2);
   document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(2);
   
-  capNhatLabel();
+  //capNhatLabel();
 }
 
 function capNhatLabel() {
