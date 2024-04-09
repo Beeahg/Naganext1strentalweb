@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var calculateButton = document.getElementById('calculateButton');
   calculateButton.addEventListener('click', function(event) {
     tinhToanGiaThue(event);
-    capNhatLabel();
+    //capNhatLabel();
   });
 });
 
@@ -21,7 +21,7 @@ function tinhToanGiaThue(event) {
   document.getElementById('tongGiaThueMualai').value = tongGiaThueMualai.toFixed(2);
   
   var kyHanThue = document.getElementById('kyHanThue');
-  capNhatLabel(kyHanThue);
+  capNhatLabel();
 }
 
 function capNhatLabel() {
