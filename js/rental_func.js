@@ -24,13 +24,13 @@ function tinhToanGiaThue(event) {
   capNhatLabel(kyHanThue);
 }
 
-function capNhatLabel(kyHanThue) {
-  // Bạn cần truyền biến kyHanThue vào hàm này
-  var kyHanThueText = kyHanThue.options[kyHanThue.selectedIndex].text;
+function capNhatLabel() {
+  var kyHanThueSelect = document.getElementById('kyHanThue');
+  var kyHanThue = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
 
   var labelo1 = document.getElementById('tuyChonLabel1');
   var labelo2 = document.getElementById('tuyChonLabel2');
 
-  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThueText;
-  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThueText;
+  labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue;
+  labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue;
 }
