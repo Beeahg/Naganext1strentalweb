@@ -19,6 +19,9 @@ function tinhToanGiaThue(event) {
   document.getElementById('tongGiamualai').value = tongGiamualai.toFixed(2);
   document.getElementById('tongGiaThueMualai').value = tongGiaThueMualai.toFixed(2);
   
+  document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(2);
+  document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(2);
+  
   var kyHanThue = document.getElementById('kyHanThue');
   capNhatLabel();
 }
