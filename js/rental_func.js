@@ -10,6 +10,8 @@ function tinhToanGiaThue(event) {
 
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
+  var kyHan = document.getElementById('kyHanThue').value);
+  var kyHanLabel = document.getElementById('kyHanThue'); 
 
   var donGiaThue = giaMua * soLuong + 1000;
   var tongGiamualai = giaMua * soLuong + 2000;
@@ -26,8 +28,6 @@ function tinhToanGiaThue(event) {
   document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(2);
   document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(2);
   
-  var kyHan = document.getElementById('kyHanThue').value);
-  var kyHanLabel = document.getElementById('kyHanThue'); 
   capNhatLabel();
 }
 
