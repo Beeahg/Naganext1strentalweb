@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var calculateButton = document.getElementById('calculateButton');
-    calculateButton.addEventListener('click', tinhToanGiaThue);
+     var calculateButton = document.getElementById('calculateButton');
+    if (calculateButton) {
+        calculateButton.addEventListener('click', tinhToanGiaThue);
+    } else {
+        console.error('Calculate button not found');
+    }
 });
 
 function tinhToanGiaThue(event) {
