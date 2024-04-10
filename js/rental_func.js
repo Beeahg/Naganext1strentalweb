@@ -79,8 +79,8 @@ function capNhatLabel() {
   var price = document.getElementById('giaMuaDuKien').value;
   var term = document.getElementById('kyHanThue').value;
 
-  // Cập nhật nội dung của info-box
-  document.getElementById('selectedProduct').textContent = document.getElementById('productInput');//'Sản phẩm bạn đã chọn: ' + product;
+  // Giả sử bạn đã có productSelect là phần tử <select> của bạn
+  var productSelect = document.getElementById('productInput');
   var selectedText = productSelect.options[productSelect.selectedIndex].text;
   document.getElementById('selectedProduct').textContent = 'Sản phẩm bạn đã chọn: ' + selectedText;
 
