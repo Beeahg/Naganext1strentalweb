@@ -61,8 +61,8 @@ function capNhatLabel() {
         var labelo2 = document.getElementById('tuyChonLabel2');
 
         if (labelo1 && labelo2) {
-            labelo1.textContent = "TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ " + kyHanThue;
-            labelo2.textContent = "TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT " + kyHanThue;
+            labelo1.innerHTML = "<strong>TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</strong> " + kyHanThue;
+            labelo2.innerHTML = "<strong>TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</strong> " + kyHanThue;
         } else {
             console.error('One or more labels not found');
         }
