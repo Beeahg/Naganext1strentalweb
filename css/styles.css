@@ -11190,8 +11190,8 @@ footer a:hover, footer a:active, footer a:focus {
 
 /* Thêm hiệu ứng khi hover nếu bạn muốn */
 .btnH-green:hover, .btnH-green:focus {
-  background-color: #1c7430 !important; /* Màu xanh đậm hơn khi hover */ #218838
-  border-color: #1e7e34 !important; /* Màu viền đậm hơn khi hover */
+  background-color: #195a2c !important; /* Màu xanh đậm hơn khi hover */ #218838
+  border-color: #174d26 !important; /* Màu viền đậm hơn khi hover */
 }
 
 .border-container {
