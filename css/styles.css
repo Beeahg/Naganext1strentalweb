@@ -11183,13 +11183,13 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 .btn-custom {
-  width: 100%; /* Sử dụng 100% nếu bạn muốn nút chiếm hết chiều rộng của cột */
+  width: 50%; /* Sử dụng 100% nếu bạn muốn nút chiếm hết chiều rộng của cột */
   background-color: #218838; /* Màu xanh đậm hơn khi hover */
   border-color: #1e7e34; /* Màu viền đậm hơn khi hover */
 }
 
 /* Thêm hiệu ứng khi hover nếu bạn muốn */
-.btnH-green:hover {
+.btnH-green:hover, .btnH-green:focus {
   background-color: #218838; /* Màu xanh đậm hơn khi hover */
   border-color: #1e7e34; /* Màu viền đậm hơn khi hover */
 }
