@@ -22,12 +22,8 @@ function tinhToanGiaThue(event) {
   
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
-  
-  //var kyHanThueSelect = document.getElementById('kyHanThue');
-  //var selectedOption = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
-  //var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
-  
   var kyHanThueSelect = document.getElementById('kyHanThue');
+
   if (!kyHanThueSelect.selectedIndex) {
     alert('Vui lòng chọn kỳ hạn thuê.');
     return;
@@ -75,5 +71,26 @@ function capNhatLabel() {
     }
 	console.log('Sau khi cập nhật labelo1:', document.getElementById('tuyChonLabel1'));
 	console.log('Sau khi cập nhật labelo2:', document.getElementById('tuyChonLabel2'));
+	
+	// bat dau cho ham chon tu dropdownlist 
+	// Lấy giá trị từ các trường input và dropdownlist
+  var product = document.getElementById('productInput').value;
+  var quantity = document.getElementById('soLuongDuKien').value;
+  var price = document.getElementById('giaMuaDuKien').value;
+  var term = document.getElementById('kyHanThue').value;
+
+  // Cập nhật nội dung của info-box
+  document.getElementById('selectedProduct').textContent = 'Sản phẩm bạn đã chọn: ' + product;
+  document.getElementById('selectedQuantity').textContent = 'Số lượng bạn đã chọn: ' + quantity;
+  document.getElementById('selectedPrice').textContent = 'Đơn giá mua vào dự kiến: ' + price;
+  document.getElementById('selectedTerm').textContent = 'Kỳ hạn thuê bạn mong muốn: ' + term;
+
+  // Hiển thị info-box nếu tất cả các trường đều có giá trị
+  if(product && quantity && price && term) {
+    document.getElementById('infoBox').style.display = 'block';
+  } else {
+    document.getElementById('infoBox').style.display = 'none';
+  }
+  
 }
 
