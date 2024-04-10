@@ -174,6 +174,11 @@
 						 <form>				 
 							<div class="mb-3">
 								<label for="productInput" class="form-label">Sản phẩm</label>
+								<style>
+									#productInput {
+									width: 400px; /* Đặt độ rộng cố định dropdownlist là 200 pixels */
+								}
+								</style>
 								<select class="form-select" id="productInput">
 									<option selected>Chọn sản phẩm thuê bạn nhé...</option>
 									<option value="1">Điều hòa Nagakawa 9000 BTU</option>
@@ -182,16 +187,26 @@
 									<!-- Add more options here -->
 								</select>
 								<label for="soLuongDuKien" class="form-label">Số lượng sản phẩm bạn muốn thuê</label>
+								<style>
+									#soLuongDuKien {
+									width: 200px; /* Đặt độ rộng cố định dropdownlist là 200 pixels */
+								}
+								</style>
 								<input type="text"  id="soLuongDuKien" class="form-control" placeholder="Số lượng sản phẩm">
 								
 								<label for="giaMuaDuKien" class="form-label">Đơn giá mua vào dự kiến</label>
+								<style>
+									#giaMuaDuKien {
+									width: 200px; /* Đặt độ rộng cố định dropdownlist là 200 pixels */
+								}
+								</style>
 								<input type="text" id="giaMuaDuKien" class="form-control" placeholder="Giá mua vào">
 								
 						
 								<label for="kyHanThue" class="form-label">Kỳ hạn thuê muốn thuê</label>
 								<style>
 									#kyHanThue {
-									width: 200px; /* Đặt độ rộng cố định dropdownlist là 200 pixels */
+									width: 400px; /* Đặt độ rộng cố định dropdownlist là 200 pixels */
 								}
 								</style>
 								<select class="form-select" id="kyHanThue" onchange="capNhatLabel()">
@@ -202,14 +217,18 @@
 								</select>
 							</div>		
 						</form>
-						<button class="btn btnH-green" type="button" id="calculateButton">Tính toán gói thuê Nagakawa Rental</button>
-						<button class="btn btnH-green" href="https://shop.nagakawa.com.vn/" target="_blank" id="refInfoButton">Tham khảo giá TẠI ĐÂY</button> 
+						<div class="mb-3">
+							<button class="btn btnH-green btn-custom" type="button" id="calculateButton">Tính toán gói thuê Nagakawa Rental</button>
+						</div>
+						<div class="mb-3">
+							<button class="btn btnH-green btn-custom" href="https://shop.nagakawa.com.vn/" target="_blank" id="refInfoButton">Tham khảo giá TẠI ĐÂY</button> 
+						</div>
 						
 					</div>
 
 					<div class="col-lg-6"> <!--class="col-sm-8 col-md-6">--> 
 							<!--<label id="tuyChonLabel1" class="form-label">TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</label> --> 
-							<a class="btn btnH-green" href="https://shop.nagakawa.com.vn/" target="_blank" id="refInfoButton">Tham khảo giá TẠI ĐÂY</a> 							
+							<!--<a class="btn btnH-green" href="https://shop.nagakawa.com.vn/" target="_blank" id="refInfoButton">Tham khảo giá TẠI ĐÂY</a> -->  							
 							<div class="col-sm-8 col-md-6">
 								<label for="donGiaThueo1" class="form-label">Đơn giá thuê trên 1 tháng</label>
 								<input type="text" id="donGiaThueo1" class="form-control">
