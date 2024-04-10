@@ -158,72 +158,73 @@
         <section class="bg-light" id="Rental-calc">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center justify-content-lg-between">
-                    <div class="col-12 col-lg-5">
-                        <h2 class="display-4 lh-1 mb-0">Tính toán gói thuê của bạn</h2>		
-					<!-- Bootstrap core JS -->
-					<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-					<!-- Core theme JS -->
-					<script src="js/scripts.js"></script>
-					<!-- SB Forms JS -->
-					<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+                    <div class="col-lg-6"> <!-- class="col-12 col-lg-5"> -->
+							<h2 class="display-4 lh-1 mb-0">Tính toán gói thuê của bạn</h2>		
+						<!-- Bootstrap core JS -->
+						<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+						<!-- Core theme JS -->
+						<script src="js/scripts.js"></script>
+						<!-- SB Forms JS -->
+						<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-                 <form>
-                    <div class="mb-3">
-                        <label for="productInput" class="form-label">Sản phẩm</label>
-                        <select class="form-select" id="productInput">
-                            <option selected>Chọn sản phẩm thuê bạn nhé...</option>
-                            <option value="1">Điều hòa Nagakawa 9000 BTU</option>
-                            <option value="2">Laptop Dell Inspiron</option>
-							<option value="3">Laptop Mac</option>
-                            <!-- Add more options here -->
-                        </select>
-						<label for="soLuongDuKien" class="form-label">Số lượng sản phẩm bạn muốn thuê</label>
-						<input type="text"  id="soLuongDuKien" class="form-control" placeholder="Số lượng sản phẩm">
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+						 <form>
+				 
+							<div class="mb-3">
+								<label for="productInput" class="form-label">Sản phẩm</label>
+								<select class="form-select" id="productInput">
+									<option selected>Chọn sản phẩm thuê bạn nhé...</option>
+									<option value="1">Điều hòa Nagakawa 9000 BTU</option>
+									<option value="2">Laptop Dell Inspiron</option>
+									<option value="3">Laptop Mac</option>
+									<!-- Add more options here -->
+								</select>
+								<label for="soLuongDuKien" class="form-label">Số lượng sản phẩm bạn muốn thuê</label>
+								<input type="text"  id="soLuongDuKien" class="form-control" placeholder="Số lượng sản phẩm">
+								
+								<label for="giaMuaDuKien" class="form-label">Đơn giá mua vào dự kiến</label>
+								<input type="text" id="giaMuaDuKien" class="form-control" placeholder="Giá mua vào">
+								
 						
-						<label for="giaMuaDuKien" class="form-label">Đơn giá mua vào dự kiến</label>
-						<input type="text" id="giaMuaDuKien" class="form-control" placeholder="Giá mua vào">
-						
-				
-						<label for="kyHanThue" class="form-label">Kỳ hạn thuê muốn thuê</label>
-						<select class="form-select" id="kyHanThue" onchange="capNhatLabel()">
-						  <option selected disabled>Chọn kỳ hạn thuê của Naganext bạn nhé...</option>
-						  <option value="24">24 tháng</option>
-						  <option value="36">36 tháng</option>
-						  <option value="48">48 tháng</option>
-						</select>
+								<label for="kyHanThue" class="form-label">Kỳ hạn thuê muốn thuê</label>
+								<select class="form-select" id="kyHanThue" onchange="capNhatLabel()">
+								  <option selected disabled>Chọn kỳ hạn thuê của Naganext bạn nhé...</option>
+								  <option value="24">24 tháng</option>
+								  <option value="36">36 tháng</option>
+								  <option value="48">48 tháng</option>
+								</select>
+							</div>
+							
+							<button class="btn btnH-green" type="button" id="calculateButton">Tính toán gói thuê Nagakawa Rental</button>
+							
+							<a class="btn btnH-green" href="https://shop.nagakawa.com.vn/" target="_blank" id="refInfoButton">Tham khảo giá TẠI ĐÂY</a>
+						</form> 						
 					</div>
-					<button class="btn btnH-green" type="button" id="calculateButton">Tính toán gói thuê Nagakawa Rental</button>
-                </form> 
-                <!-- End of new form HoangNA moi them -->
-					
-					</div>
-						<!--<div class="col-sm-8 col-md-6">
-                        <div class="px-5 px-sm-0"><img class="img-fluid rounded-circle" src="https://source.unsplash.com/u8Jn2rzYIps/900x900" alt="..." /></div> --> 
-						<div class="col-sm-8 col-md-6">
-								<label id="tuyChonLabel1" class="form-label">TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</label>
+
+					<div class="col-lg-6"> <!--class="col-sm-8 col-md-6">--> 
+							<label id="tuyChonLabel1" class="form-label">TÙY CHỌN 1: THUÊ VÀ BẠN MUA LẠI SAU KHI THUÊ</label>
 															
-								<div class="col-sm-8 col-md-6">
-									<label for="donGiaThueo1" class="form-label">Đơn giá thuê trên 1 tháng</label>
-									<input type="text" id="donGiaThueo1" class="form-control">
-									<label for="tongGiamualai" class="form-label">Tổng giá mua lại máy</label>
-									<input type="text" id="tongGiamualai" class="form-control">
-									<label for="tongGiaThueMualai" class="form-label">Tổng giá thuê và mua lại máy</label>
-									<input type="text" id="tongGiaThueMualai" class="form-control">
+							<div class="col-sm-8 col-md-6">
+								<label for="donGiaThueo1" class="form-label">Đơn giá thuê trên 1 tháng</label>
+								<input type="text" id="donGiaThueo1" class="form-control">
+								<label for="tongGiamualai" class="form-label">Tổng giá mua lại máy</label>
+								<input type="text" id="tongGiamualai" class="form-control">
+								<label for="tongGiaThueMualai" class="form-label">Tổng giá thuê và mua lại máy</label>
+								<input type="text" id="tongGiaThueMualai" class="form-control">
 								</div>
 								<label id="tuyChonLabel2" class="form-label">TÙY CHỌN 2: HOÀN LẠI MÁY CHO NAGANEXT</label>
 								
-								<div class="col-sm-8 col-md-6">
-									<label for="donGiaThueo2" class="form-label">Đơn giá thuê trên 1 tháng</label>
-									<input type="text" id="donGiaThueo2" class="form-control">
-									<label for="tongGiaThueo2" class="form-label">Tổng giá thuê</label> 
-									<input type="text" id="tongGiaThueo2" class="form-control">
-								<label for="productInput5" class="form-label">Ghi chú: do sau thời hạn Thuê bạn trả lại tài sản cho chúng tôi nên không phải trả chi phí mua lại máy như TÙY CHỌN 1</label>
-								</div>
-								
-						</div>		
+							<div class="col-sm-8 col-md-6">
+								<label for="donGiaThueo2" class="form-label">Đơn giá thuê trên 1 tháng</label>
+								<input type="text" id="donGiaThueo2" class="form-control">
+								<label for="tongGiaThueo2" class="form-label">Tổng giá thuê</label> 
+								<input type="text" id="tongGiaThueo2" class="form-control">
+							<label for="productInput5" class="form-label">Ghi chú: do sau thời hạn Thuê bạn trả lại tài sản cho chúng tôi nên không phải trả chi phí mua lại máy như TÙY CHỌN 1</label>
+							</div>			
+					</div>		
 						
                 </div>
             </div>
