@@ -80,7 +80,7 @@ function capNhatLabel() {
   var term = document.getElementById('kyHanThue').value;
 
   // Cập nhật nội dung của info-box
-  document.getElementById('selectedProduct').textContent = 'Sản phẩm bạn đã chọn: ' + product;
+  document.getElementById('selectedProduct').textContent = document.getElementById('productInput').value;//'Sản phẩm bạn đã chọn: ' + product;
   document.getElementById('selectedQuantity').textContent = 'Số lượng bạn đã chọn: ' + quantity;
   document.getElementById('selectedPrice').textContent = 'Đơn giá mua vào dự kiến: ' + price;
   document.getElementById('selectedTerm').textContent = 'Kỳ hạn thuê bạn mong muốn: ' + term;
