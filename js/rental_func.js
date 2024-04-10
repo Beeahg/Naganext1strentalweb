@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Đăng ký sự kiện cho nút tính toán
     if (calculateButton) {
         calculateButton.addEventListener('click', function(event) {
-            tinhToanGiaThue();
+            tinhToanGiaThue(event);
             capNhatLabel(); // Cập nhật thông tin label khi nút tính toán được nhấn
         });
     } else {
