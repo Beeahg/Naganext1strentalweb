@@ -2,19 +2,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var calculateButton = document.getElementById('calculateButton');
     var kyHanThueSelect = document.getElementById('kyHanThue');
 
+        // Đăng ký sự kiện cho nút tính toán
     if (calculateButton) {
-        calculateButton.addEventListener('click', tinhToanGiaThue);
+        calculateButton.addEventListener('click', function(event) {
+            tinhToanGiaThue();
+            capNhatLabel(); // Cập nhật thông tin label khi nút tính toán được nhấn
+        });
     } else {
         console.error('Calculate button not found');
     }
 
+    // Đăng ký sự kiện cho dropdown kỳ hạn thuê, chỉ cập nhật label khi có thay đổi
     if (kyHanThueSelect) {
         kyHanThueSelect.addEventListener('change', capNhatLabel);
     } else {
         console.error('kyHanThue select not found');
     }
-	capNhatLabel();
-}
 });
 
 
