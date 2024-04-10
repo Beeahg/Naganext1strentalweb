@@ -82,11 +82,11 @@ function capNhatLabel() {
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput');
   var selectedText = productSelect.options[productSelect.selectedIndex].text;
-  document.getElementById('selectedProduct').textContent = 'Sản phẩm bạn đã chọn: ' + selectedText;
+  document.getElementById('selectedProduct').innerHTML = '<strong>Sản phẩm bạn đã chọn:</strong> ' + selectedText;
 
-  document.getElementById('selectedQuantity').textContent = 'Số lượng bạn đã chọn: ' + quantity;
-  document.getElementById('selectedPrice').textContent = 'Đơn giá mua vào dự kiến: ' + price;
-  document.getElementById('selectedTerm').textContent = 'Kỳ hạn thuê bạn mong muốn: ' + term;
+  document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantity;
+  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
+  document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
 
   // Hiển thị info-box nếu tất cả các trường đều có giá trị
   if(product && quantity && price && term) {
