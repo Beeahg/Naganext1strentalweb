@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function tinhToanGiaThue(event) {
   
   console.log('Tính toán được gọi');
+  if (event) {
   event.preventDefault();
+  }
   
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
@@ -52,8 +54,7 @@ function tinhToanGiaThue(event) {
   
   document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(0);
   document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(0);
-  
-  //capNhatLabel();
+ 
 }
 
 function capNhatLabel() {
