@@ -81,6 +81,9 @@ function capNhatLabel() {
 
   // Cập nhật nội dung của info-box
   document.getElementById('selectedProduct').textContent = document.getElementById('productInput');//'Sản phẩm bạn đã chọn: ' + product;
+  var selectedText = productSelect.options[productSelect.selectedIndex].text;
+  document.getElementById('selectedProduct').textContent = 'Sản phẩm bạn đã chọn: ' + selectedText;
+
   document.getElementById('selectedQuantity').textContent = 'Số lượng bạn đã chọn: ' + quantity;
   document.getElementById('selectedPrice').textContent = 'Đơn giá mua vào dự kiến: ' + price;
   document.getElementById('selectedTerm').textContent = 'Kỳ hạn thuê bạn mong muốn: ' + term;
