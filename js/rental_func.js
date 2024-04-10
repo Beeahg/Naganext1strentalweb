@@ -13,7 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error('kyHanThue select not found');
     }
+	
+	document.getElementById('calculateButton').addEventListener('click', function() {
+        // Hàm của bạn để thực hiện khi nút được nhấn
+        calculateRentalPackage();
+    });
+	
+	function calculateRentalPackage() {
+    // Logic tính toán gói thuê của bạn ở đây
+    console.log('Nút tính toán gói thuê đã được nhấn');
+    // ... phần còn lại của mã tính toán
+	 capNhatLabel();
+}
 });
+
+
 
 function tinhToanGiaThue(event) {
   
