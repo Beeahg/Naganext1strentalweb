@@ -43,12 +43,12 @@ function tinhToanGiaThue(event) {
   var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
   var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
   
-  document.getElementById('donGiaThueo1').value = donGiaThueo1.toFixed(2);
-  document.getElementById('tongGiamualai').value = tongGiamualai.toFixed(2);
-  document.getElementById('tongGiaThueMualai').value = tongGiaThueMualai.toFixed(2);
+  document.getElementById('donGiaThueo1').value = donGiaThueo1.toFixed(0);
+  document.getElementById('tongGiamualai').value = tongGiamualai.toFixed(0);
+  document.getElementById('tongGiaThueMualai').value = tongGiaThueMualai.toFixed(0);
   
-  document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(2);
-  document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(2);
+  document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(0);
+  document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(0);
   
   //capNhatLabel();
 }
