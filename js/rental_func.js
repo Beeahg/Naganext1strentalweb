@@ -173,6 +173,7 @@ var images = [
 var currentIndex = 0;
 
 function nextImage() {
+  console.log('previousImage called');
   // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
   currentIndex = (currentIndex + 1) % images.length;
   // Cập nhật src của thẻ img
@@ -180,6 +181,7 @@ function nextImage() {
 }
 
 function previousImage() {
+	console.log('nextImage called');
   // Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   // Cập nhật src của thẻ img
