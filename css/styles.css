@@ -11278,27 +11278,26 @@ footer a:hover, footer a:active, footer a:focus {
   text-align: center; /* Căn giữa hình ảnh */
 }
 
+/*nút nhấn Next/Prev của sản phẩm*/
+
 .product-image button {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10; /* Đảm bảo button nằm trên hình ảnh */
-  /*background: #ffffffaa; /* Màu nền nửa trong suốt */
+  background-color: #gray; /* Màu nền ô xám */
   border: none;
-  padding: 10px;
-  
-  font-size: 24px; /* Tăng kích thước mũi tên */
-  width: 30px; /* Chiều rộng của button */
-  height: 30px; /* Chiều cao của button */
-  line-height: 30px; /* Căn giữa mũi tên theo chiều dọc */
-  text-align: center; /* Căn giữa mũi tên theo chiều ngang */
-  background-color: rgba(0, 0, 0, 0.5); /* Nền màu nửa trong suốt */
-  color: white; /* Màu của mũi tên */
+  color: white; /* Màu mũi tên */
+  padding: 10px 15px; /* Điều chỉnh padding để phù hợp */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Điều chỉnh font size của icon hoặc text */
+  margin: 4px 2px;
+  cursor: pointer;
+  line-height: 20px; /* Điều chỉnh line height để căn giữa chiều dọc */
+  width: 50px; /* Rộng của nút */
+  height: 50px; /* Cao của nút */
 }
 
 .product-image button:hover {
-  background: #ffffff; /* Màu nền khi hover */
+   background-color: #darkgray; /* Màu nền khi hover */
 }
 
 .product-image button:nth-child(1) {
