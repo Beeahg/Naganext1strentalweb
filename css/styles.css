@@ -11231,7 +11231,7 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 /* Thay thế '#sectionID' với ID thực tế của phần tử bạn muốn thay đổi ảnh nền */
-#download {
+#downloadCorp {
   margin-top: -20px;
   background-image: url('assets/img/Offerings.png'); /* Đường dẫn đến ảnh mới của bạn */
   background-size: cover; /* Hoặc bạn có thể sử dụng 'contain' tùy thuộc vào cách bạn muốn ảnh hiển thị */
