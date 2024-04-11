@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+	 // ID của sản phẩm mặc định là 1, hoặc bất kỳ ID nào bạn muốn hiển thị mặc định
+	changeProduct(1);
+  
     var calculateButton = document.getElementById('calculateButton');
     var kyHanThueSelect = document.getElementById('kyHanThue');
 

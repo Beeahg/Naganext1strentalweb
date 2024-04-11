@@ -11278,10 +11278,9 @@ footer a:hover, footer a:active, footer a:focus {
   text-align: center; /* Căn giữa hình ảnh */
 }
 
-/*nút nhấn Next/Prev của sản phẩm*/
-
+/* Nút nhấn Next/Prev của sản phẩm */
 .product-image button {
-  background-color: #gray; /* Màu nền ô xám */
+  background-color: #808080; /* Màu nền ô xám */
   border: none;
   color: white; /* Màu mũi tên */
   padding: 10px 15px; /* Điều chỉnh padding để phù hợp */
@@ -11294,17 +11293,20 @@ footer a:hover, footer a:active, footer a:focus {
   line-height: 20px; /* Điều chỉnh line height để căn giữa chiều dọc */
   width: 50px; /* Rộng của nút */
   height: 50px; /* Cao của nút */
+  position: absolute; /* Đặt nút vị trí tuyệt đối */
+  top: 50%; /* Đặt nút ở giữa chiều cao của .product-image */
+  transform: translateY(-50%); /* Dùng transform để căn giữa đúng */
 }
 
 .product-image button:hover {
-   background-color: #darkgray; /* Màu nền khi hover */
+  background-color: #A9A9A9; /* Màu nền khi hover */
 }
 
-.product-image button:nth-child(1) {
+.product-image button:first-of-type {
   left: 10px;
 }
 
-.product-image button:nth-child(3) {
+.product-image button:last-of-type {
   right: 10px;
 }
 
