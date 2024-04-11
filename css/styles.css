@@ -11243,3 +11243,64 @@ footer a:hover, footer a:active, footer a:focus {
   /* Đặt hoặc gỡ bỏ các thuộc tính ở đây */
   display: none; /* Ví dụ, để loại bỏ hoàn toàn */
 }
+
+/* ma CSS cho hien thi thong so san pham */ 
+#product-display {
+  display: flex;
+}
+
+.product-container {
+  display: flex;
+}
+
+.product-list, .product-image, .product-specs {
+  flex: 1; /* Chia đều kích thước cho mỗi cột */
+  padding: 10px; /* Thêm khoảng cách giữa các cột */
+}
+
+.product-list ul {
+  list-style: none; /* Loại bỏ dấu chấm trước mỗi item */
+}
+
+.product-list li {
+  cursor: pointer; /* Hiển thị con trỏ như nút nhấn */
+  padding: 5px; /* Thêm padding cho mỗi item */
+  background-color: #f8f8f8; /* Màu nền cho mỗi item */
+  margin-bottom: 5px; /* Khoảng cách giữa các item */
+}
+
+.product-list li:hover {
+  background-color: #eaeaea; /* Hiệu ứng khi di chuột vào */
+}
+
+.product-image {
+  position: relative;
+  text-align: center; /* Căn giữa hình ảnh */
+}
+
+.product-image button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Đảm bảo button nằm trên hình ảnh */
+  background: #ffffffaa; /* Màu nền nửa trong suốt */
+  border: none;
+  padding: 10px;
+}
+
+.product-image button:hover {
+  background: #ffffff; /* Màu nền khi hover */
+}
+
+.product-image button:nth-child(1) {
+  left: 10px;
+}
+
+.product-image button:nth-child(3) {
+  right: 10px;
+}
+
+.product-specs {
+  border-left: 1px solid #ccc; /* Phân cách cột thông số với cột hình ảnh */
+}

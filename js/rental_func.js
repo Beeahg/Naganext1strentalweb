@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 function tinhToanGiaThue(event) {
   
   console.log('Tính toán được gọi');
@@ -156,4 +155,75 @@ function formatInputData(value) {
         maximumFractionDigits: 2,
         minimumFractionDigits: 2
     });
+}
+//==========================================================================
+// Ham cho phep section product selected showing tại section id="product-display"
+function changeProduct(productId) {
+  // Cập nhật hình ảnh sản phẩm và thông số kỹ thuật dựa trên productId
+  document.getElementById('productImg').src = 'assets\img\products\...' + productId + '.png';
+  // Cập nhật bảng thông số kỹ thuật tương tự
+}
+
+// Giả sử bạn có một mảng chứa đường dẫn tới các ảnh của sản phẩm
+var images = [
+  'assets\img\products\standing.AC.type.standard.1.png',
+  'assets\img\products\standing.AC.type.circle.2.png',
+  'assets\img\products\non.Inverter.wall.AC.9k.type.standard.3.png',
+  'assets\img\products\Inverter.wall.AC.9k.type.standard.4.png',
+  'assets\img\products\Cassette.ceiling.AC.type.standard.5.png',
+  // thêm các đường dẫn ảnh khác tương tự
+];
+
+// Biến để theo dõi ảnh hiện tại đang được hiển thị
+var currentIndex = 0;
+
+function nextImage() {
+  // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
+  currentIndex = (currentIndex + 1) % images.length;
+  // Cập nhật src của thẻ img
+  document.getElementById('productImg').src = images[currentIndex];
+}
+
+function previousImage() {
+  // Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  // Cập nhật src của thẻ img
+  document.getElementById('productImg').src = images[currentIndex];
+}
+
+
+// hien thi cac thong so ky thuat của san pham*/
+
+// Một đối tượng lưu trữ thông tin của các sản phẩm
+var products = [
+  {
+    name: 'Điều hòa tủ đứng tiêu chuẩn Nagakawa',
+    image: 'path_to_image1.png',
+    specs: { Power': '2000W',
+			'Weight': '2kg',
+			// Các thông số khác
+			},
+  // định nghĩa các sản phẩm khác tương tự
+];
+
+function changeProduct(index) {
+    // -1 vì mảng bắt đầu từ 0 và productId bắt đầu từ 1
+  var product = products[index - 1]; 
+  document.getElementById('productImg').src = product.image;
+  updateSpecs(product.specs);
+}
+
+function updateSpecs(specs) {
+  // Xóa các thông số kỹ thuật hiện tại
+  var specsTable = document.getElementById('productSpecs');
+  specsTable.innerHTML = '';
+
+  // Thêm các hàng mới vào bảng thông số kỹ thuật
+  for (var key in specs) {
+    var row = specsTable.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.textContent = key;
+    cell2.textContent = specs[key];
+  }
 }
