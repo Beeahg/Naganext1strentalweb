@@ -11258,6 +11258,13 @@ footer a:hover, footer a:active, footer a:focus {
   padding: 10px; /* Thêm khoảng cách giữa các cột */
 }
 
+.product-list {
+  flex: 0.75; /* Chia đều kích thước cho mỗi cột */
+  padding: 10px; /* Thêm khoảng cách giữa các cột */
+  border-right: 1px solid #ccc; /* Phân cách cột danh sách với cột hình ảnh */
+  /* Các thuộc tính khác nếu có */
+}
+
 .product-list ul {
   list-style: none; /* Loại bỏ dấu chấm trước mỗi item */
 }
