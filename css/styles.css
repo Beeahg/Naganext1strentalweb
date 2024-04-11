@@ -11280,14 +11280,14 @@ footer a:hover, footer a:active, footer a:focus {
 
 /* Nút nhấn Next/Prev của sản phẩm */
 .product-image button {
-  background-color: #808080; /* Màu nền ô xám */
+   background-image: linear-gradient(to right, #004d00, #009900); /* Gradient from dark green to light green */
   border: none;
   color: white; /* Màu mũi tên */
   padding: 10px 15px; /* Điều chỉnh padding để phù hợp */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px; /* Điều chỉnh font size của icon hoặc text */
+  font-size: 24px; /* Điều chỉnh font size của icon hoặc text */
   margin: 4px 2px;
   cursor: pointer;
   line-height: 20px; /* Điều chỉnh line height để căn giữa chiều dọc */
@@ -11299,7 +11299,7 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 .product-image button:hover {
-  background-color: #A9A9A9; /* Màu nền khi hover */
+   background-image: linear-gradient(to right, #003300, #006600); /* Darker gradient for hover */
 }
 
 .product-image button:first-of-type {
