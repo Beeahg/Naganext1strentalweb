@@ -197,7 +197,7 @@ var products = [
 	id: 1, // Thêm trường id cho mỗi sản phẩm
     name: 'Điều hòa tủ đứng tiêu chuẩn Nagakawa',
     image: 'assets/img/products/standing.AC.type.standard.1.png',
-    specs: { Power': '2000W',
+    specs: { 'Power': '2000W',
 			'Weight': '2kg',
 			// Các thông số khác
 			}
@@ -207,7 +207,7 @@ var products = [
 	id: 2,
 	name: 'Điều hòa tủ tròn 2 chiều Nagakawa',
     image: 'assets/img/products/standing.AC.type.circle.2.png',
-    specs: { Power': '3000W',
+    specs: { 'Power': '3000W',
 			'Weight': '4kg',
 			// Các thông số khác
 			}
@@ -217,7 +217,7 @@ var products = [
 	id: 3,
 	name: 'Điều hòa treo tường 1 chiều Nagakawa',
     image: 'assets/img/products/non.Inverter.wall.AC.9k.type.standard.3.png',
-    specs: { Power': '2400W',
+    specs: { 'Power': '2400W',
 			'Weight': '12kg',
 			// Các thông số khác
 			}
@@ -227,7 +227,7 @@ var products = [
 	id: 4,	
 	name: 'Điều hòa treo tường Inverter 1 chiều Nagakawa',
     image: 'assets/img/products/Inverter.wall.AC.9k.type.standard.4.png',
-    specs: { Power': '2040W',
+    specs: { 'Power': '2040W',
 			'Weight': '26kg',
 			// Các thông số khác
 			}
@@ -237,7 +237,7 @@ var products = [
 	id: 5,
 	name: 'Điều hòa âm trần Casette Nagakawa',
     image: 'assets/img/products/Cassette.ceiling.AC.type.standard.5.png',
-    specs: { Power': '600W',
+    specs: { 'Power': '600W',
 			'Weight': '14kg',
 			// Các thông số khác
 			}
@@ -246,6 +246,7 @@ var products = [
 
 function changeProduct(productId) {
     // Tìm sản phẩm dựa trên productId
+  console.log('changeProduct called');
   var product = products.find(p => p.id === productId);
   if (product) {
     // Cập nhật hình ảnh sản phẩm
