@@ -11222,3 +11222,7 @@ footer a:hover, footer a:active, footer a:focus {
 .info-box:hover {
   transform: translateY(-5px); /* Nâng box lên khi hover */
 }
+
+.text-whitefooter1 {
+    color: white !important;
+}

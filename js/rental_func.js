@@ -141,10 +141,6 @@ function onInputChanged(event) {
   });
 }
 
-.text-whitefooter1 {
-    color: white !important;
-}
-
 function formatInputData(value) {
     // Chuyển giá trị hiện tại thành số thực, loại bỏ các ký tự không phải chữ số.
     let num = parseFloat(value.replace(/[^\d\.]/g, ''));
