@@ -11314,7 +11314,9 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 .custom-divider {
-  height: 5px; /* Độ dày của đường viền */
-  background: linear-gradient(to right, #ff00cc, #333399); /* Gradient màu */
-  width: 100%; /* Độ rộng tối đa */
+  position: relative;
+  z-index: 10; /* Hoặc một giá trị cao hơn nếu cần */
+  height: 5px;
+  background: linear-gradient(to right, #ff00cc, #333399);
+  width: 100%;
 }
