@@ -11313,11 +11313,8 @@ footer a:hover, footer a:active, footer a:focus {
   border-left: 1px solid #ccc; /* Phân cách cột thông số với cột hình ảnh */
 }
 
-#product-display::after {
-  content: "";
-  display: block;
-  margin: 0 auto; /* Canh giữa đường kẻ */
-  height: 5px; /* Điều chỉnh độ dày của đường kẻ */
-  width: 80%; /* Điều chỉnh chiều rộng của đường kẻ */
-  background: linear-gradient(to right, #ff00ff, #0000ff); /* Gradient màu từ tím sang xanh dương */
+.custom-divider {
+  height: 5px; /* Độ dày của đường viền */
+  background: linear-gradient(to right, #ff00cc, #333399); /* Gradient màu */
+  width: 100%; /* Độ rộng tối đa */
 }
