@@ -10834,7 +10834,10 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;
+  /*background: linear-gradient(45deg, #2937f0, #9f1ae2) !important; HoangNA*/ 
+  background-image: url('assets/img/Offerings.png'); /* Thay 'path_to_your_image.jpg' bằng đường dẫn thực tế đến ảnh của bạn */
+  background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ phần tử */
+  background-position: center; /* Căn giữa ảnh */
 }
 
 .font-alt {
@@ -11229,7 +11232,7 @@ footer a:hover, footer a:active, footer a:focus {
 
 /* Thay thế '#sectionID' với ID thực tế của phần tử bạn muốn thay đổi ảnh nền */
 #download {
-  background-image: url('assets/img/Offerings.png') !important; /* Đường dẫn đến ảnh mới của bạn */
+  background-image: url('assets/img/Offerings.png'); /* Đường dẫn đến ảnh mới của bạn */
   background-size: cover; /* Hoặc bạn có thể sử dụng 'contain' tùy thuộc vào cách bạn muốn ảnh hiển thị */
   background-position: center; /* Điều chỉnh vị trí của ảnh nền */
   background-repeat: no-repeat; /* Nếu bạn không muốn ảnh nền lặp lại */
