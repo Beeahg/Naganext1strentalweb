@@ -11312,3 +11312,12 @@ footer a:hover, footer a:active, footer a:focus {
 .product-specs {
   border-left: 1px solid #ccc; /* Phân cách cột thông số với cột hình ảnh */
 }
+
+#product-display::after {
+  content: "";
+  display: block;
+  margin: 0 auto; /* Canh giữa đường kẻ */
+  height: 5px; /* Điều chỉnh độ dày của đường kẻ */
+  width: 80%; /* Điều chỉnh chiều rộng của đường kẻ */
+  background: linear-gradient(to right, #ff00ff, #0000ff); /* Gradient màu từ tím sang xanh dương */
+}
