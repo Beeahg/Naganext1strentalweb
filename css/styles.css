@@ -11263,14 +11263,17 @@ footer a:hover, footer a:active, footer a:focus {
 }
 
 .product-list li {
-  cursor: pointer; /* Hiển thị con trỏ như nút nhấn */
-  padding: 5px; /* Thêm padding cho mỗi item */
-  background-color: #f8f8f8; /* Màu nền cho mỗi item */
-  margin-bottom: 5px; /* Khoảng cách giữa các item */
+  background-image: linear-gradient(to right, #28a745, #144228); /* Gradient từ xanh lá đậm sang xanh lá nhạt */
+  color: white; /* Màu chữ trắng */
+  padding: 10px; /* Điều chỉnh padding để phù hợp */
+  margin: 5px 0; /* Khoảng cách giữa các mục */
+  border-radius: 5px; /* Làm tròn góc */
+  cursor: pointer; /* Hiệu ứng con trỏ khi di chuyển qua mục */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
 }
 
 .product-list li:hover {
-  background-color: #eaeaea; /* Hiệu ứng khi di chuột vào */
+  background-color: #155724; /* Màu khi hover */
 }
 
 .product-image {
