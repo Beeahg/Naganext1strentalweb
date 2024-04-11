@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('kyHanThue select not found');
     }
 	// Thêm event listener cho trường input giá mua vào
-    document.getElementById('giaMuaDuKien').addEventListener('input', onInputChanged);
+   document.getElementById('giaMuaDuKien').addEventListener('input', onInputChanged);
 	// Thêm event listener cho trường input giá mua vào
     document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
+	
 });
 
 
@@ -33,10 +34,7 @@ function tinhToanGiaThue(event) {
   event.preventDefault();
   }
   
-  var giaMuaRaw = parseFloat(document.getElementById('giaMuaDuKien').value);
-  var soLuongRaw = parseFloat(document.getElementById('soLuongDuKien').value);
-  
-  var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 2;
+  var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value);
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
   var kyHanThueSelect = document.getElementById('kyHanThue');
 
@@ -48,8 +46,8 @@ function tinhToanGiaThue(event) {
   var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
   
 
-  var donGiaThueo1 = giaMuaRaw * soLuongRaw*1.05/kyHanThueValue;
-  var tongGiamualai = giaMuaRaw * soLuongRaw*0.13;
+  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
+  var tongGiamualai = giaMua * soLuong*0.13;
   var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
   
   var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
@@ -101,7 +99,7 @@ function capNhatLabel() {
 
   document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantity;
  
-  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + formatNumber(price);
+  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
   
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
 
@@ -124,14 +122,42 @@ function formatNumber(num) {
 
 // Hàm này sẽ được gọi mỗi khi có sự thay đổi trên trường nhập liệu
 function onInputChanged(event) {
-  // Lấy giá trị hiện tại của trường input, loại bỏ dấu phẩy
-  let inputNumber = event.target.value.replace(/,/g, '');
+   // Lấy giá trị hiện tại của trường input, loại bỏ mọi ký tự không phải là số hoặc dấu chấm
+  let inputNumber = event.target.value.replace(/[^0-9.]/g, '');
+
+  // Nếu sau khi loại bỏ các ký tự không hợp lệ mà không còn ký tự nào, trả về chuỗi rỗng
+  if(inputNumber === '' || isNaN(inputNumber)) {
+    event.target.value = '';
+    return;
+  }
 
   // Chuyển đổi chuỗi nhập vào thành số
   inputNumber = parseFloat(inputNumber);
 
   // Định dạng số và cập nhật lại trường input
-  event.target.value = inputNumber ? formatNumber(inputNumber) : '';
+  event.target.value = inputNumber.toLocaleString('en-US', {
+    maximumFractionDigits: 2,
+    minimumFractionDigits: 0
+  });
 }
 
+.text-whitefooter1 {
+    color: white !important;
+}
 
+function formatInputData(value) {
+    // Chuyển giá trị hiện tại thành số thực, loại bỏ các ký tự không phải chữ số.
+    let num = parseFloat(value.replace(/[^\d\.]/g, ''));
+    
+    // Kiểm tra xem số có hợp lệ hay không, nếu không trả về chuỗi rỗng.
+    if (isNaN(num)) {
+        return '';
+    }
+
+    // Chuyển số thành chuỗi có dấu phẩy cho hàng nghìn.
+    return num.toLocaleString('en-US', {
+        style: 'decimal',
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2
+    });
+}
