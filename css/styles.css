@@ -11284,9 +11284,17 @@ footer a:hover, footer a:active, footer a:focus {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10; /* Đảm bảo button nằm trên hình ảnh */
-  background: #ffffffaa; /* Màu nền nửa trong suốt */
+  /*background: #ffffffaa; /* Màu nền nửa trong suốt */
   border: none;
   padding: 10px;
+  
+  font-size: 24px; /* Tăng kích thước mũi tên */
+  width: 30px; /* Chiều rộng của button */
+  height: 30px; /* Chiều cao của button */
+  line-height: 30px; /* Căn giữa mũi tên theo chiều dọc */
+  text-align: center; /* Căn giữa mũi tên theo chiều ngang */
+  background-color: rgba(0, 0, 0, 0.5); /* Nền màu nửa trong suốt */
+  color: white; /* Màu của mũi tên */
 }
 
 .product-image button:hover {

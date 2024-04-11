@@ -158,19 +158,14 @@ function formatInputData(value) {
 }
 //==========================================================================
 // Ham cho phep section product selected showing tại section id="product-display"
-function changeProduct(productId) {
-  // Cập nhật hình ảnh sản phẩm và thông số kỹ thuật dựa trên productId
-  document.getElementById('productImg').src = 'assets\img\products\...' + productId + '.png';
-  // Cập nhật bảng thông số kỹ thuật tương tự
-}
 
 // Giả sử bạn có một mảng chứa đường dẫn tới các ảnh của sản phẩm
 var images = [
-  'assets\img\products\standing.AC.type.standard.1.png',
-  'assets\img\products\standing.AC.type.circle.2.png',
-  'assets\img\products\non.Inverter.wall.AC.9k.type.standard.3.png',
-  'assets\img\products\Inverter.wall.AC.9k.type.standard.4.png',
-  'assets\img\products\Cassette.ceiling.AC.type.standard.5.png',
+  'assets/img/products/standing.AC.type.standard.1.png',
+  'assets/img/products/standing.AC.type.circle.2.png',
+  'assets/img/products/non.Inverter.wall.AC.9k.type.standard.3.png',
+  'assets/img/products/Inverter.wall.AC.9k.type.standard.4.png',
+  'assets/img/products/Cassette.ceiling.AC.type.standard.5.png',
   // thêm các đường dẫn ảnh khác tương tự
 ];
 
@@ -198,20 +193,63 @@ function previousImage() {
 var products = [
   {
     name: 'Điều hòa tủ đứng tiêu chuẩn Nagakawa',
-    image: 'path_to_image1.png',
+    image: 'assets/img/products/standing.AC.type.standard.1.png',
     specs: { Power': '2000W',
 			'Weight': '2kg',
 			// Các thông số khác
 			},
   // định nghĩa các sản phẩm khác tương tự
+  
+	name: 'Điều hòa tủ tròn 2 chiều Nagakawa',
+    image: 'assets/img/products/standing.AC.type.circle.2.png',
+    specs: { Power': '3000W',
+			'Weight': '4kg',
+			// Các thông số khác
+			},
+			
+	name: 'Điều hòa treo tường 1 chiều Nagakawa',
+    image: 'assets/img/products/non.Inverter.wall.AC.9k.type.standard.3.png',
+    specs: { Power': '2400W',
+			'Weight': '12kg',
+			// Các thông số khác
+			},
+			
+	name: 'Điều hòa treo tường Inverter 1 chiều Nagakawa',
+    image: 'assets/img/products/Inverter.wall.AC.9k.type.standard.4.png',
+    specs: { Power': '2040W',
+			'Weight': '26kg',
+			// Các thông số khác
+			},
+	name: 'Điều hòa âm trần Casette Nagakawa',
+    image: 'assets/img/products/Cassette.ceiling.AC.type.standard.5.png',
+    specs: { Power': '600W',
+			'Weight': '14kg',
+			// Các thông số khác
+			},
 ];
 
-function changeProduct(index) {
-    // -1 vì mảng bắt đầu từ 0 và productId bắt đầu từ 1
-  var product = products[index - 1]; 
-  document.getElementById('productImg').src = product.image;
-  updateSpecs(product.specs);
-}
+function changeProduct(productId) {
+  // Tìm sản phẩm dựa trên productId
+  var product = products.find(p => p.id === productId);
+  if (product) {
+    // Cập nhật hình ảnh sản phẩm
+    document.getElementById('productImg').src = product.image;
+
+    // Cập nhật bảng thông số kỹ thuật
+    var specsTable = document.getElementById('productSpecs');
+    specsTable.innerHTML = ''; // Xóa thông số cũ trước khi thêm mới
+
+    for (var specName in product.specs) {
+      var row = specsTable.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.textContent = specName;
+      cell2.textContent = product.specs[specName];
+    }
+  } else {
+    console.error('Sản phẩm không tồn tại với ID:', productId);
+  }
+}	
 
 function updateSpecs(specs) {
   // Xóa các thông số kỹ thuật hiện tại
