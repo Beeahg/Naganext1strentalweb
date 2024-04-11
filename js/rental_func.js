@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error('kyHanThue select not found');
     }
+	// Thêm event listener cho trường input giá mua vào
+    document.getElementById('giaMuaDuKien').addEventListener('input', onInputChanged);
+	// Thêm event listener cho trường input giá mua vào
+    document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
 });
 
 
@@ -29,8 +33,8 @@ function tinhToanGiaThue(event) {
   event.preventDefault();
   }
   
-  var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 0;
-  var soLuong = parseFloat(document.getElementById('soLuongDuKien').value) || 0;
+  var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 2;
+  var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
   var kyHanThueSelect = document.getElementById('kyHanThue');
 
   if (!kyHanThueSelect.selectedIndex) {
@@ -48,12 +52,12 @@ function tinhToanGiaThue(event) {
   var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
   var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
   
-  document.getElementById('donGiaThueo1').value = donGiaThueo1.toFixed(0);
-  document.getElementById('tongGiamualai').value = tongGiamualai.toFixed(0);
-  document.getElementById('tongGiaThueMualai').value = tongGiaThueMualai.toFixed(0);
+  document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1.toFixed(2));
+  document.getElementById('tongGiamualai').value = formatNumber(tongGiamualai.toFixed(2));
+  document.getElementById('tongGiaThueMualai').value = formatNumber(tongGiaThueMualai.toFixed(2));
   
-  document.getElementById('donGiaThueo2').value = donGiaThueo2.toFixed(0);
-  document.getElementById('tongGiaThueo2').value = tongGiaThueo2.toFixed(0);
+  document.getElementById('donGiaThueo2').value = formatNumber(donGiaThueo2.toFixed(2));
+  document.getElementById('tongGiaThueo2').value = formatNumber(tongGiaThueo2.toFixed(2));
  
 }
 
@@ -93,15 +97,38 @@ function capNhatLabel() {
   document.getElementById('selectedProduct').innerHTML = '<strong>Sản phẩm bạn đã chọn:</strong> ' + selectedText;
 
   document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantity;
-  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
+ 
+  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + formatNumber(price);
+  
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
+
 
   // Hiển thị info-box nếu tất cả các trường đều có giá trị
   if(product && quantity && price && term) {
     document.getElementById('infoBox').style.display = 'block';
   } else {
     document.getElementById('infoBox').style.display = 'none';
-  }
-  
+	alert('Vui lòng nhập đầy đủ thông tin trước khi nhấn nút "Tính toán gói thuê", đặc biệt chú ý nhập 3 tham số gồm CHỌN KỲ HẠN THUÊ, số lượng, giá mua vào nhé bạn !');
+	//HoangNA: can co alert de nguoi dung can phai nhap so lieu vào moi cho tinh toán 
+  }  
 }
+
+function formatNumber(num) {
+   return num.toLocaleString('en-US', {
+    maximumFractionDigits: 0,
+  });
+}
+
+// Hàm này sẽ được gọi mỗi khi có sự thay đổi trên trường nhập liệu
+function onInputChanged(event) {
+  // Lấy giá trị hiện tại của trường input, loại bỏ dấu phẩy
+  let inputNumber = event.target.value.replace(/,/g, '');
+
+  // Chuyển đổi chuỗi nhập vào thành số
+  inputNumber = parseFloat(inputNumber);
+
+  // Định dạng số và cập nhật lại trường input
+  event.target.value = inputNumber ? formatNumber(inputNumber) : '';
+}
+
 
