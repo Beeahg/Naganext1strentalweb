@@ -33,6 +33,9 @@ function tinhToanGiaThue(event) {
   event.preventDefault();
   }
   
+  var giaMuaRaw = parseFloat(document.getElementById('giaMuaDuKien').value);
+  var soLuongRaw = parseFloat(document.getElementById('soLuongDuKien').value);
+  
   var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value) || 2;
   var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
   var kyHanThueSelect = document.getElementById('kyHanThue');
@@ -45,8 +48,8 @@ function tinhToanGiaThue(event) {
   var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
   
 
-  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
-  var tongGiamualai = giaMua * soLuong*0.13;
+  var donGiaThueo1 = giaMuaRaw * soLuongRaw*1.05/kyHanThueValue;
+  var tongGiamualai = giaMuaRaw * soLuongRaw*0.13;
   var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
   
   var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
