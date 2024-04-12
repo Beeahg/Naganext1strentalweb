@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 	 // ID của sản phẩm mặc định là 1, hoặc bất kỳ ID nào bạn muốn hiển thị mặc định
-	changeProduct(1);
-  
+ 
     var calculateButton = document.getElementById('calculateButton');
     var kyHanThueSelect = document.getElementById('kyHanThue');
 
@@ -24,7 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Thêm event listener cho trường input giá mua vào
    document.getElementById('giaMuaDuKien').addEventListener('input', onInputChanged);
 	// Thêm event listener cho trường input giá mua vào
-    document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
+   document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
+   
+   document.querySelectorAll('.product-list li').forEach(function(li) {
+	  li.addEventListener('click', function() {
+		var productId = this.getAttribute('data-product-id');
+		updateProductSpecs(productId);
+	  });
+	});
+
 	
 });
 
@@ -195,93 +202,67 @@ function previousImage() {
 // hien thi cac thong so ky thuat của san pham*/
 
 // Một đối tượng lưu trữ thông tin của các sản phẩm
-var products = [
+var productSpecs = [
 	{
-	id: 1, // Thêm trường id cho mỗi sản phẩm
-    name: 'Điều hòa tủ đứng tiêu chuẩn Nagakawa',
-    image: 'assets/img/products/standing.AC.type.standard.1.png',
-    specs: { 'Power': '2000W',
-			'Weight': '2kg',
-			// Các thông số khác
-			}
+		id: 'product1',
+		specs: [
+		  { name: 'Công suất', unit: 'kW', value: '8.206' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '2.612' },
+		  // Thêm các thông số khác
+		]
 	},
-
+	
 	{
-	id: 2,
-	name: 'Điều hòa tủ tròn 2 chiều Nagakawa',
-    image: 'assets/img/products/standing.AC.type.circle.2.png',
-    specs: { 'Power': '3000W',
-			'Weight': '4kg',
-			// Các thông số khác
-			}
+		id: 'product2',
+		specs: [
+		  { name: 'Công suất', unit: 'kW', value: '506' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '2.62' },
+		  // Thêm các thông số khác
+		]
 	},
-
+	
 	{
-	id: 3,
-	name: 'Điều hòa treo tường 1 chiều Nagakawa',
-    image: 'assets/img/products/non.Inverter.wall.AC.9k.type.standard.3.png',
-    specs: { 'Power': '2400W',
-			'Weight': '12kg',
-			// Các thông số khác
-			}
+		id: 'product3',
+		specs: [
+		  { name: 'Công suất', unit: 'kW', value: '904' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '59.62' },
+		  // Thêm các thông số khác
+		]
 	},
-
+	
 	{
-	id: 4,	
-	name: 'Điều hòa treo tường Inverter 1 chiều Nagakawa',
-    image: 'assets/img/products/Inverter.wall.AC.9k.type.standard.4.png',
-    specs: { 'Power': '2040W',
-			'Weight': '26kg',
-			// Các thông số khác
-			}
+		id: 'product4',
+		specs: [
+		  { name: 'Công suất', unit: 'kW', value: '1006' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '456' },
+		  // Thêm các thông số khác
+		]
 	},
-
+	
 	{
-	id: 5,
-	name: 'Điều hòa âm trần Casette Nagakawa',
-    image: 'assets/img/products/Cassette.ceiling.AC.type.standard.5.png',
-    specs: { 'Power': '600W',
-			'Weight': '14kg',
-			// Các thông số khác
-			}
+		id: 'product5',
+		specs: [
+		  { name: 'Công suất', unit: 'kW', value: '1306' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '267762' },
+		  // Thêm các thông số khác
+		]
 	},
 ];
 
-function changeProduct(productId) {
-    // Tìm sản phẩm dựa trên productId
-  console.log('changeProduct called');
-  var product = products.find(p => p.id === productId);
-  if (product) {
-    // Cập nhật hình ảnh sản phẩm
-    document.getElementById('productImg').src = product.image;
+function updateProductSpecs(productId) {
+  var product = productSpecs.find(p => p.id === productId);
+  var tableBody = document.getElementById('product-specs-table-body');
+  tableBody.innerHTML = ''; // Xóa thông số cũ
 
-    // Cập nhật bảng thông số kỹ thuật
-    var specsTable = document.getElementById('productSpecs');
-    specsTable.innerHTML = ''; // Xóa thông số cũ trước khi thêm mới
-
-    for (var specName in product.specs) {
-      var row = specsTable.insertRow();
-      var cell1 = row.insertCell(0);
-      var cell2 = row.insertCell(1);
-      cell1.textContent = specName;
-      cell2.textContent = product.specs[specName];
-    }
-  } else {
-    console.error('Sản phẩm không tồn tại với ID:', productId);
-  }
-}	
-
-function updateSpecs(specs) {
-  // Xóa các thông số kỹ thuật hiện tại
-  var specsTable = document.getElementById('productSpecs');
-  specsTable.innerHTML = '';
-
-  // Thêm các hàng mới vào bảng thông số kỹ thuật
-  for (var key in specs) {
-    var row = specsTable.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.textContent = key;
-    cell2.textContent = specs[key];
-  }
+  product.specs.forEach(function(spec) {
+    var row = tableBody.insertRow();
+    var cellName = row.insertCell(0);
+    var cellUnit = row.insertCell(1);
+    var cellValue = row.insertCell(2);
+    cellName.textContent = spec.name;
+    cellUnit.textContent = spec.unit;
+    cellValue.textContent = spec.value;
+  });
 }
+
+
