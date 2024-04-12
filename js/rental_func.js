@@ -45,8 +45,8 @@ function tinhToanGiaThue(event) {
   event.preventDefault();
   }
   
-  var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value);
-  var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
+  //var giaMua = parseFloat(document.getElementById('giaMuaDuKien').value);
+  //var soLuong = parseFloat(document.getElementById('soLuongDuKien').value);
   var kyHanThueSelect = document.getElementById('kyHanThue');
 
   if (!kyHanThueSelect.selectedIndex) {
@@ -55,6 +55,17 @@ function tinhToanGiaThue(event) {
   }
   var selectedOption = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
   var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
+  
+  console.log(soLuong);
+  console.log(giaMua);
+  
+   // Lấy giá trị đã định dạng với dấu phẩy từ các trường input
+  var giaMuaFormatted = document.getElementById('giaMuaDuKien').value;
+  var soLuongFormatted = document.getElementById('soLuongDuKien').value;
+
+  // Chuyển đổi chuỗi định dạng số với dấu phẩy thành số thực sử dụng cho tính toán
+  var giaMua = parseFloat(giaMuaFormatted.replace(/,/g, ''));
+  var soLuong = parseFloat(soLuongFormatted.replace(/,/g, ''));
   
   console.log(soLuong);
   console.log(giaMua);
