@@ -64,23 +64,56 @@ function tinhToanGiaThue(event) {
   var soLuongFormatted = document.getElementById('soLuongDuKien').value;
 
   // Chuyển đổi chuỗi định dạng số với dấu phẩy thành số thực sử dụng cho tính toán
-  var giaMua = parseFloat(giaMuaFormatted.replace(/,/g, ''));
-  var soLuong = parseFloat(soLuongFormatted.replace(/,/g, ''));
+  //var giaMua = parseFloat(giaMuaFormatted.replace(/,/g, ''));
+  //var soLuong = parseFloat(soLuongFormatted.replace(/,/g, ''));
+  var giaMua = parseInt(giaMuaFormatted.replace(/,/g, ''),10);
+  var soLuong = parseInt(soLuongFormatted.replace(/,/g, ''),10);
   
   console.log(soLuong);
   console.log(giaMua);
-   
-  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
-  console.log(donGiaThueo1);
-  var tongGiamualai = giaMua * soLuong*0.13;
-  console.log(tongGiamualai);
-  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
-  console.log(tongGiaThueMualai);
+  console.log(kyHanThueValue);
   
-  var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
-  console.log(donGiaThueo2);
-  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
-  console.log(tongGiaThueo2);
+  if (kyHanThueValue === 12) {
+  
+	  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
+	  console.log(donGiaThueo1);
+	  var tongGiamualai = giaMua * soLuong*0.13;
+	  console.log(tongGiamualai);
+	  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+	  console.log(tongGiaThueMualai);
+	  
+	  var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
+	  console.log(donGiaThueo2);
+	  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
+	  console.log(tongGiaThueo2);
+	  
+	  } else if (kyHanThueValue === 24) {
+			  var donGiaThueo1 = giaMua * soLuong*1.19/kyHanThueValue;
+			  console.log(donGiaThueo1);
+			  var tongGiamualai = giaMua * soLuong*0.12;
+			  console.log(tongGiamualai);
+			  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+			  console.log(tongGiaThueMualai);
+			  
+			  var donGiaThueo2 = giaMua * soLuong*1.02/kyHanThueValue;
+			  console.log(donGiaThueo2);
+			  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
+			  console.log(tongGiaThueo2);
+	  } else if (kyHanThueValue === 36){
+			  var donGiaThueo1 = giaMua * soLuong*1.31/kyHanThueValue;
+			  console.log(donGiaThueo1);
+			  var tongGiamualai = giaMua * soLuong*0.11;
+			  console.log(tongGiamualai);
+			  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+			  console.log(tongGiaThueMualai);
+			  
+			  var donGiaThueo2 = giaMua * soLuong*1.215/kyHanThueValue;
+			  console.log(donGiaThueo2);
+			  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
+			  console.log(tongGiaThueo2);
+  // Công thức mặc định hoặc xử lý khác nếu kyHanThueValue có giá trị khác
+ }
+
   
   document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1.toFixed(2));
   document.getElementById('tongGiamualai').value = formatNumber(tongGiamualai.toFixed(2));
