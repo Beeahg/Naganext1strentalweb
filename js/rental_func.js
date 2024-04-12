@@ -250,11 +250,11 @@ var productSpecs = [
 	{
 		id: 'product4',
 		specs: [
-		  { name: 'Model máy', unit: 'model', value: 'NT-C28R2M32' },
-		  { name: 'Công suất định mức làm lạnh', unit: 'BTU/h', value: '28,000' },
-		  { name: 'Công suất tiêu thụ điện', unit: 'kW', value: '8.206' },
-		  { name: 'Điện năng tiêu thụ làm lạnh', unit: 'W', value: '2,612' },
-		  { name: 'Cường độ Dòng điện', unit: 'A', value: '11.2' },
+		  { name: 'Model máy', unit: 'model', value: 'NIS-C09R2T29' },
+		  { name: 'Công suất định mức làm lạnh', unit: 'BTU/h', value: '9,000(3,583~11,942)' },
+		  { name: 'Công suất tiêu thụ điện', unit: 'W', value: '870 (220~1250)' },
+		  { name: 'Trọng lượng', unit: 'kg', value: '8' },
+		  { name: 'Cường độ Dòng điện', unit: 'A', value: '4.0 (1.0~6.0)' },
 		  // Thêm các thông số khác
 		]
 	},
@@ -262,8 +262,11 @@ var productSpecs = [
 	{
 		id: 'product5',
 		specs: [
-		  { name: 'Công suất', unit: 'kW', value: '1306' },
-		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '267762' },
+		  { name: 'Model máy', unit: 'model', value: 'NT-C28R2M32' },
+		  { name: 'Công suất định mức làm lạnh', unit: 'BTU/h', value: '28,000' },
+		  { name: 'Công suất tiêu thụ điện', unit: 'kW', value: '8.206' },
+		  { name: 'Điện năng tiêu thụ làm lạnh', unit: 'W', value: '2,612' },
+		  { name: 'Cường độ Dòng điện', unit: 'A', value: '11.2' },
 		  // Thêm các thông số khác
 		]
 	},
