@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Thêm event listener cho trường input giá mua vào
    document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
    
+   updateProductSpecs('product1'); // ID sản phẩm mặc định mà bạn muốn hiển thị 
+   
    document.querySelectorAll('.product-list li').forEach(function(li) {
 	  li.addEventListener('click', function() {
 		var productId = this.getAttribute('data-product-id');
@@ -182,21 +184,21 @@ var images = [
 // Biến để theo dõi ảnh hiện tại đang được hiển thị
 var currentIndex = 0;
 
-function nextImage() {
-  console.log('previousImage called');
-  // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
-  currentIndex = (currentIndex + 1) % images.length;
-  // Cập nhật src của thẻ img
-  document.getElementById('productImg').src = images[currentIndex];
-}
+	function nextImage() {
+	  console.log('previousImage called');
+	  // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
+	  currentIndex = (currentIndex + 1) % images.length;
+	  // Cập nhật src của thẻ img
+	  document.getElementById('productImg').src = images[currentIndex];
+	}
 
-function previousImage() {
-	console.log('nextImage called');
-  // Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  // Cập nhật src của thẻ img
-  document.getElementById('productImg').src = images[currentIndex];
-}
+	function previousImage() {
+		console.log('nextImage called');
+	  // Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
+	  currentIndex = (currentIndex - 1 + images.length) % images.length;
+	  // Cập nhật src của thẻ img
+	  document.getElementById('productImg').src = images[currentIndex];
+	}
 
 
 // hien thi cac thong so ky thuat của san pham*/
@@ -206,8 +208,12 @@ var productSpecs = [
 	{
 		id: 'product1',
 		specs: [
-		  { name: 'Công suất', unit: 'kW', value: '8.206' },
-		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '2.612' },
+		  { name: 'Model máy', unit: 'model', value: 'NP-C28DH+' },
+		  { name: 'Công suất làm lạnh', unit: 'BTU/h', value: '28,000' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '	2,600' },
+		  { name: 'Dòng điện', unit: 'A', value: '12.7' },
+		  { name: 'Trọng lượng cục đứng trong', unit: 'kg', value: '36' },
+		  { name: 'Kích thước thân máy cục trong', unit: 'mm', value: '510x315x1750' },
 		  // Thêm các thông số khác
 		]
 	},
@@ -215,8 +221,14 @@ var productSpecs = [
 	{
 		id: 'product2',
 		specs: [
-		  { name: 'Công suất', unit: 'kW', value: '506' },
-		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '2.62' },
+		  { name: 'Model máy', unit: 'model', value: 'NIP-A30DC' },
+		  { name: 'Công suất định mức làm lạnh', unit: 'BTU/h', value: '28,000(3,240-30,000)' },
+		  { name: 'Công suất định mức sưởi ấm', unit: 'BTU/h', value: '30,000(3,240-31,500)' },
+		  { name: 'Điện năng tiêu thụ làm lạnh', unit: 'W', value: '2,650(350-3,000)' },
+		  { name: 'Điện năng tiêu thụ sưởi ấm', unit: 'W', value: '2,500(350-3,100)' },
+		  { name: 'Cường độ Dòng điện làm lạnh', unit: 'A', value: '11.2(1.6-13.7)' },
+		  { name: 'Cường độ Dòng điện sưởi ấm', unit: 'A', value: '10.8(1.6-14.1)' },
+		  { name: 'Khối lượng thân máy cục trong', unit: 'kg', value: '29' },
 		  // Thêm các thông số khác
 		]
 	},
@@ -224,8 +236,13 @@ var productSpecs = [
 	{
 		id: 'product3',
 		specs: [
-		  { name: 'Công suất', unit: 'kW', value: '904' },
-		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '59.62' },
+		  { name: 'Model máy', unit: 'model', value: 'NS-C09R2T30' },
+		  { name: 'Công suất làm lạnh', unit: 'BTU/h', value: '9000' },
+		  { name: 'Công suất điện', unit: 'kWh', value: '2.64' },
+		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '709' },
+		  { name: 'Dòng điện', unit: 'A', value: '3.7' },
+		  { name: 'Trọng lượng dàn lạnh', unit: 'kg', value: '8' },
+		  { name: 'Khác', unit: 'Inverter', value: 'Không' },
 		  // Thêm các thông số khác
 		]
 	},
@@ -233,8 +250,11 @@ var productSpecs = [
 	{
 		id: 'product4',
 		specs: [
-		  { name: 'Công suất', unit: 'kW', value: '1006' },
-		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '456' },
+		  { name: 'Model máy', unit: 'model', value: 'NT-C28R2M32' },
+		  { name: 'Công suất định mức làm lạnh', unit: 'BTU/h', value: '28,000' },
+		  { name: 'Công suất tiêu thụ điện', unit: 'kW', value: '8.206' },
+		  { name: 'Điện năng tiêu thụ làm lạnh', unit: 'W', value: '2,612' },
+		  { name: 'Cường độ Dòng điện', unit: 'A', value: '11.2' },
 		  // Thêm các thông số khác
 		]
 	},
