@@ -114,13 +114,19 @@ function tinhToanGiaThue(event) {
   // Công thức mặc định hoặc xử lý khác nếu kyHanThueValue có giá trị khác
  }
 
+  var donGiaThueo1Rounded = Math.round(donGiaThueo1);
+  var tongGiamualaiRounded = Math.round(tongGiamualai);
+  var tongGiaThueMualaiRounded = Math.round(tongGiaThueMualai);
   
-  document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1.toFixed(2));
-  document.getElementById('tongGiamualai').value = formatNumber(tongGiamualai.toFixed(2));
-  document.getElementById('tongGiaThueMualai').value = formatNumber(tongGiaThueMualai.toFixed(2));
+  var donGiaThueo2Rounded = Math.round(donGiaThueo2);
+  var tongGiaThueo2Rounded = Math.round(tongGiaThueo2);
   
-  document.getElementById('donGiaThueo2').value = formatNumber(donGiaThueo2.toFixed(2));
-  document.getElementById('tongGiaThueo2').value = formatNumber(tongGiaThueo2.toFixed(2));
+  document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1Rounded));
+  document.getElementById('tongGiamualai').value = formatNumber(tongGiamualaiRounded);
+  document.getElementById('tongGiaThueMualai').value = formatNumber(tongGiaThueMualaiRounded);
+  
+  document.getElementById('donGiaThueo2').value = formatNumber(donGiaThueo2Rounded);
+  document.getElementById('tongGiaThueo2').value = formatNumber(tongGiaThueo2Rounded);
  
 }
 
