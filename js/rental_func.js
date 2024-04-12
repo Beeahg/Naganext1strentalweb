@@ -25,16 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Thêm event listener cho trường input giá mua vào
    document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
    
-   updateProductSpecs('product1'); // ID sản phẩm mặc định mà bạn muốn hiển thị 
+   /*updateProductSpecs('product1'); // ID sản phẩm mặc định mà bạn muốn hiển thị 
    
    document.querySelectorAll('.product-list li').forEach(function(li) {
 	  li.addEventListener('click', function() {
 		var productId = this.getAttribute('data-product-id');
 		updateProductSpecs(productId);
 	  });
-	});
+	});*/
+	 // Hiển thị thông số sản phẩm mặc định khi trang web được nạp
+    updateProduct('product1');
 
-	
+    // Thiết lập sự kiện khi người dùng chọn một sản phẩm từ danh sách
+    document.querySelectorAll('.product-list li').forEach(function(li, index) {
+        li.addEventListener('click', function() {
+            var productId = this.getAttribute('data-product-id');
+            updateProduct(productId);
+        });
+    });
 });
 
 
