@@ -189,7 +189,7 @@ function nextImage() {
   // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
   currentIndex = (currentIndex + 1) % images.length;
   // Cập nhật src của thẻ img
-  //document.getElementById('productImg').src = images[currentIndex];
+  document.getElementById('productImg').src = images[currentIndex];
   var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
   updateProduct(productId);
 }
@@ -199,7 +199,7 @@ function previousImage() {
 	// Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   // Cập nhật src của thẻ img
-  //document.getElementById('productImg').src = images[currentIndex];
+  document.getElementById('productImg').src = images[currentIndex];
   var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
   updateProduct(productId);
 }
