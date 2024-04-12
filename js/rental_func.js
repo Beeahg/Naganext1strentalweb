@@ -56,16 +56,11 @@ function tinhToanGiaThue(event) {
   var selectedOption = kyHanThueSelect.options[kyHanThueSelect.selectedIndex].text;
   var kyHanThueValue = parseInt(selectedOption.match(/\d+/)[0], 10);
   
-  console.log(soLuong);
-  console.log(giaMua);
-  
-   // Lấy giá trị đã định dạng với dấu phẩy từ các trường input
+  // Lấy giá trị đã định dạng với dấu phẩy từ các trường input
   var giaMuaFormatted = document.getElementById('giaMuaDuKien').value;
   var soLuongFormatted = document.getElementById('soLuongDuKien').value;
 
   // Chuyển đổi chuỗi định dạng số với dấu phẩy thành số thực sử dụng cho tính toán
-  //var giaMua = parseFloat(giaMuaFormatted.replace(/,/g, ''));
-  //var soLuong = parseFloat(soLuongFormatted.replace(/,/g, ''));
   var giaMua = parseInt(giaMuaFormatted.replace(/,/g, ''),10);
   var soLuong = parseInt(soLuongFormatted.replace(/,/g, ''),10);
   
@@ -121,7 +116,7 @@ function tinhToanGiaThue(event) {
   var donGiaThueo2Rounded = Math.round(donGiaThueo2);
   var tongGiaThueo2Rounded = Math.round(tongGiaThueo2);
   
-  document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1Rounded));
+  document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1Rounded);
   document.getElementById('tongGiamualai').value = formatNumber(tongGiamualaiRounded);
   document.getElementById('tongGiaThueMualai').value = formatNumber(tongGiaThueMualaiRounded);
   
