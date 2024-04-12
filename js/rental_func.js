@@ -25,14 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Thêm event listener cho trường input giá mua vào
    document.getElementById('soLuongDuKien').addEventListener('input', onInputChanged);
    
-   /*updateProductSpecs('product1'); // ID sản phẩm mặc định mà bạn muốn hiển thị 
-   
-   document.querySelectorAll('.product-list li').forEach(function(li) {
-	  li.addEventListener('click', function() {
-		var productId = this.getAttribute('data-product-id');
-		updateProductSpecs(productId);
-	  });
-	});*/
 	 // Hiển thị thông số sản phẩm mặc định khi trang web được nạp
     updateProduct('product1');
 
@@ -197,7 +189,7 @@ function nextImage() {
   // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
   currentIndex = (currentIndex + 1) % images.length;
   // Cập nhật src của thẻ img
-  document.getElementById('productImg').src = images[currentIndex];
+  //document.getElementById('productImg').src = images[currentIndex];
   var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
   updateProduct(productId);
 }
@@ -207,7 +199,7 @@ function previousImage() {
 	// Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   // Cập nhật src của thẻ img
-  document.getElementById('productImg').src = images[currentIndex];
+  //document.getElementById('productImg').src = images[currentIndex];
   var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
   updateProduct(productId);
 }
