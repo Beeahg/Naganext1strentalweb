@@ -70,39 +70,39 @@ function tinhToanGiaThue(event) {
   
   if (kyHanThueValue === 12) {
   
-	  var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
+	  var donGiaThueo1 = giaMua * soLuong*1.053/kyHanThueValue;
 	  console.log(donGiaThueo1);
-	  var tongGiamualai = giaMua * soLuong*0.13;
+	  var tongGiamualai = giaMua * soLuong*0.135;
 	  console.log(tongGiamualai);
 	  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
 	  console.log(tongGiaThueMualai);
 	  
-	  var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
+	  var donGiaThueo2 = giaMua * soLuong*0.838/kyHanThueValue;
 	  console.log(donGiaThueo2);
 	  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
 	  console.log(tongGiaThueo2);
 	  
 	  } else if (kyHanThueValue === 24) {
-			  var donGiaThueo1 = giaMua * soLuong*1.19/kyHanThueValue;
-			  console.log(donGiaThueo1);
-			  var tongGiamualai = giaMua * soLuong*0.12;
-			  console.log(tongGiamualai);
-			  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
-			  console.log(tongGiaThueMualai);
-			  
-			  var donGiaThueo2 = giaMua * soLuong*1.02/kyHanThueValue;
-			  console.log(donGiaThueo2);
-			  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
-			  console.log(tongGiaThueo2);
-	  } else if (kyHanThueValue === 36){
-			  var donGiaThueo1 = giaMua * soLuong*1.31/kyHanThueValue;
+			  var donGiaThueo1 = giaMua * soLuong*1.192/kyHanThueValue;
 			  console.log(donGiaThueo1);
 			  var tongGiamualai = giaMua * soLuong*0.11;
 			  console.log(tongGiamualai);
 			  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
 			  console.log(tongGiaThueMualai);
 			  
-			  var donGiaThueo2 = giaMua * soLuong*1.215/kyHanThueValue;
+			  var donGiaThueo2 = giaMua * soLuong*1.078/kyHanThueValue;
+			  console.log(donGiaThueo2);
+			  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
+			  console.log(tongGiaThueo2);
+	  } else if (kyHanThueValue === 36){
+			  var donGiaThueo1 = giaMua * soLuong*1.333/kyHanThueValue;
+			  console.log(donGiaThueo1);
+			  var tongGiamualai = giaMua * soLuong*0.075;
+			  console.log(tongGiamualai);
+			  var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+			  console.log(tongGiaThueMualai);
+			  
+			  var donGiaThueo2 = giaMua * soLuong*1.29/kyHanThueValue;
 			  console.log(donGiaThueo2);
 			  var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
 			  console.log(tongGiaThueo2);
@@ -154,7 +154,7 @@ function capNhatLabel() {
   var quantity = document.getElementById('soLuongDuKien').value;
   var price = document.getElementById('giaMuaDuKien').value;
   var term = document.getElementById('kyHanThue').value;
-
+a 
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
   //var selectedText = productSelect.options[productSelect.selectedIndex].text;
