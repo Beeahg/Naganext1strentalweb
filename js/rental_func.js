@@ -184,22 +184,25 @@ var images = [
 // Biến để theo dõi ảnh hiện tại đang được hiển thị
 var currentIndex = 0;
 
-	function nextImage() {
-	  console.log('previousImage called');
-	  // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
-	  currentIndex = (currentIndex + 1) % images.length;
-	  // Cập nhật src của thẻ img
-	  document.getElementById('productImg').src = images[currentIndex];
-	}
+function nextImage() {
+  console.log('previousImage called');
+  // Tăng currentIndex, nếu đến cuối mảng thì quay lại 0
+  currentIndex = (currentIndex + 1) % images.length;
+  // Cập nhật src của thẻ img
+  //document.getElementById('productImg').src = images[currentIndex];
+  var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
+  updateProduct(productId);
+}
 
-	function previousImage() {
-		console.log('nextImage called');
-	  // Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
-	  currentIndex = (currentIndex - 1 + images.length) % images.length;
-	  // Cập nhật src của thẻ img
-	  document.getElementById('productImg').src = images[currentIndex];
-	}
-
+function previousImage() {
+  console.log('nextImage called');
+	// Giảm currentIndex, nếu về âm thì chuyển tới ảnh cuối cùng của mảng
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  // Cập nhật src của thẻ img
+  //document.getElementById('productImg').src = images[currentIndex];
+  var productId = 'product' + (currentIndex + 1); // Cập nhật productId dựa trên currentIndex
+  updateProduct(productId);
+}
 
 // hien thi cac thong so ky thuat của san pham*/
 
@@ -271,6 +274,18 @@ var productSpecs = [
 		]
 	},
 ];
+
+// Cập nhật sản phẩm dựa trên productId
+function updateProduct(productId) {
+    updateProductImage(productId);
+    updateProductSpecs(productId);
+}
+
+// Cập nhật hình ảnh sản phẩm
+function updateProductImage(productId) {
+    var imageFileName = productId + '.png'; // Chỉ một ví dụ, cần được thay đổi cho phù hợp
+    document.getElementById('productImg').src = 'assets/img/products/' + imageFileName;
+}
 
 function updateProductSpecs(productId) {
   var product = productSpecs.find(p => p.id === productId);
