@@ -58,11 +58,16 @@ function tinhToanGiaThue(event) {
   
 
   var donGiaThueo1 = giaMua * soLuong*1.05/kyHanThueValue;
+  console.log('donGiaThueo1');
   var tongGiamualai = giaMua * soLuong*0.13;
+  console.log('tongGiamualai');
   var tongGiaThueMualai = donGiaThueo1 * kyHanThueValue + tongGiamualai;
+  console.log('tongGiaThueMualai');
   
   var donGiaThueo2 = giaMua * soLuong*0.81/kyHanThueValue;
+  console.log('donGiaThueo2');
   var tongGiaThueo2 = donGiaThueo2 * kyHanThueValue;
+  console.log('tongGiaThueo2');
   
   document.getElementById('donGiaThueo1').value = formatNumber(donGiaThueo1.toFixed(2));
   document.getElementById('tongGiamualai').value = formatNumber(tongGiamualai.toFixed(2));
