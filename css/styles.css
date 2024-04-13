@@ -11232,11 +11232,13 @@ footer a:hover, footer a:active, footer a:focus {
 
 /* Thay thế '#sectionID' với ID thực tế của phần tử bạn muốn thay đổi ảnh nền */
 #downloadCorp {
-  margin-top: -5px;
   background-image: url('assets/img/Offerings.png'); /* Đường dẫn đến ảnh mới của bạn */
   background-size: cover; /* Hoặc bạn có thể sử dụng 'contain' tùy thuộc vào cách bạn muốn ảnh hiển thị */
   background-position: center; /* Điều chỉnh vị trí của ảnh nền */
   background-repeat: no-repeat; /* Nếu bạn không muốn ảnh nền lặp lại */
+  
+  margin-top: 0; /* Giảm khoảng cách phía trên của section */
+  margin-bottom: 0; /* Giảm khoảng cách phía dưới nếu cần */
 }
 
 #downloadCorp::before, #downloadCorp::after {
@@ -11330,6 +11332,7 @@ footer a:hover, footer a:active, footer a:focus {
   height: 25px;
   background: linear-gradient(to right, #ff00cc, #333399);
   width: 100%;
+  margin-bottom: 0; /* Giảm khoảng cách phía dưới của đường viền */
 }
 
 .product-specs table {
