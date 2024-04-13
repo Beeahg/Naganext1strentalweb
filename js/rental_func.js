@@ -154,7 +154,7 @@ function capNhatLabel() {
   var quantity = document.getElementById('soLuongDuKien').value;
   var price = document.getElementById('giaMuaDuKien').value;
   var term = document.getElementById('kyHanThue').value;
-a 
+ 
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
   //var selectedText = productSelect.options[productSelect.selectedIndex].text;
