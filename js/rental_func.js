@@ -151,12 +151,6 @@ function capNhatLabel() {
 	// bat dau cho ham chon tu dropdownlist 
 	// Lấy giá trị từ các trường input và dropdownlist
   var product = document.getElementById('productInput').value;
-  var quantityString = document.getElementById('soLuongDuKien').value.replace(/,/g, ''); // Xóa dấu phẩy và chuẩn bị chuyển đổi sang số
-  var priceString = document.getElementById('giaMuaDuKien').value.replace(/,/g, ''); // Xóa dấu phẩy và chuẩn bị chuyển đổi sang số
-
-   // Chuyển đổi chuỗi đã xử lý thành số nguyên và số thực
-  var quantity = parseInt(quantityString, 10); // Chuyển đổi sang số nguyên
-  var pricetemp = parseFloat(priceString); // Chuyển đổi sang số thực
 
 
   var term = document.getElementById('kyHanThue').value;
@@ -170,7 +164,7 @@ function capNhatLabel() {
   document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantity;
  
   //document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
-  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + pricetemp.toLocaleString('vi-VN') + ' VND';
+  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price.toLocaleString('vi-VN') + ' VND';
   
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
   
