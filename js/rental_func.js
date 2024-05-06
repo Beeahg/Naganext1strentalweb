@@ -158,7 +158,10 @@ function capNhatLabel() {
   var pricetemp = parseFloat(document.getElementById('giaMuaDuKien').value);  // Chuyển đổi sang số thực
 
   var term = document.getElementById('kyHanThue').value;
-  var priceTotal = pricetemp*quantity; 
+  var priceTotal = Math.round(pricetemp*quantity;) 
+  
+ 
+  document.getElementById('selectedPriceTotal').value = formatNumber(priceTotal);
  
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
@@ -171,6 +174,7 @@ function capNhatLabel() {
   document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price.toLocaleString('vi-VN') + ' VND';
   
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
+  
   document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua vào dự kiến:</strong> ' + priceTotal.toLocaleString('vi-VN') + ' VND';
   
   
