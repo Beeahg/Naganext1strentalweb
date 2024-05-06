@@ -161,7 +161,6 @@ function capNhatLabel() {
   var priceTotal = Math.round(pricetemp*quantity;) 
   
  
-  document.getElementById('selectedPriceTotal').value = formatNumber(priceTotal);
  
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
