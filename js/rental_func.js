@@ -155,8 +155,7 @@ function capNhatLabel() {
   //var price = document.getElementById('giaMuaDuKien').value;
   
   var quantity = parseInt(document.getElementById('soLuongDuKien').value, 10);  // Chuyển đổi sang số nguyên
-  var price = parseFloat(document.getElementById('giaMuaDuKien').value);  // Chuyển đổi sang số thực
-  //var price = parseInt(document.getElementById('giaMuaDuKien').value, 10);  // Chuyển đổi sang số nguyên
+  var price = parseInt(document.getElementById('giaMuaDuKien').value, 10);  // Chuyển đổi sang số nguyên
 
   var term = document.getElementById('kyHanThue').value;
   var priceTotal = price*quantity; 
