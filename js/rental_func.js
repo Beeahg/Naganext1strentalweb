@@ -165,9 +165,9 @@ function capNhatLabel() {
  
   document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
   
-  document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua vào dự kiến:</strong> ' + priceTotal;
-  
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
+  
+  document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua vào dự kiến:</strong> ' + priceTotal.toLocaleString('vi-VN') + ' VND';
   
 
 
