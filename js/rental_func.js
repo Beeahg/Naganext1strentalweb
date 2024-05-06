@@ -152,13 +152,13 @@ function capNhatLabel() {
 	// Lấy giá trị từ các trường input và dropdownlist
   var product = document.getElementById('productInput').value;
   //var quantity = document.getElementById('soLuongDuKien').value;
-  //var price = document.getElementById('giaMuaDuKien').value;
+  var price = document.getElementById('giaMuaDuKien').value;
   
   var quantity = parseInt(document.getElementById('soLuongDuKien').value, 10);  // Chuyển đổi sang số nguyên
-  var price = parseInt(document.getElementById('giaMuaDuKien').value, 10);  // Chuyển đổi sang số nguyên
+  var pricetemp = parseFloat(document.getElementById('giaMuaDuKien').value);  // Chuyển đổi sang số thực
 
   var term = document.getElementById('kyHanThue').value;
-  var priceTotal = price*quantity; 
+  var priceTotal = pricetemp*quantity; 
  
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
