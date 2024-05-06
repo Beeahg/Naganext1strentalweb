@@ -158,9 +158,9 @@ function capNhatLabel() {
   var pricetemp = parseFloat(document.getElementById('giaMuaDuKien').value);  // Chuyển đổi sang số thực
 
   var term = document.getElementById('kyHanThue').value;
-  var priceTotal = Math.round(pricetemp*quantity;) 
+  var priceTotal = pricetemp*quantity; 
   
- 
+  
  
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
