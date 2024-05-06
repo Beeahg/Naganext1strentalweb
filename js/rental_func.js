@@ -151,7 +151,7 @@ function capNhatLabel() {
 	// bat dau cho ham chon tu dropdownlist 
 	// Lấy giá trị từ các trường input và dropdownlist
   var product = document.getElementById('productInput').value;
-  //var quantity = document.getElementById('soLuongDuKien').value;
+  var quantityLabel = document.getElementById('soLuongDuKien').value;
   var price = document.getElementById('giaMuaDuKien').value;
   
   //var quantity = parseInt(document.getElementById('soLuongDuKien').value, 10);  // Chuyển đổi sang số nguyên
@@ -168,7 +168,7 @@ function capNhatLabel() {
   //var selectedText = productSelect.options[productSelect.selectedIndex].text;
   document.getElementById('selectedProduct').innerHTML = '<strong>Sản phẩm bạn đã chọn:</strong> ' + productSelect;
 
-  document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantity;
+  document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantityLabel;
  
   //document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
   document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price.toLocaleString('vi-VN') + ' VND';
