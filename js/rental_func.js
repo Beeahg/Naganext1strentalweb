@@ -309,7 +309,7 @@ var productSpecs = [
 		  { name: 'Điện năng tiêu thụ', unit: 'W', value: '709' },
 		  { name: 'Dòng điện', unit: 'A', value: '3.7' },
 		  { name: 'Trọng lượng dàn lạnh', unit: 'kg', value: '8' },
-		  { name: 'Khác', unit: 'Inverter', value: 'Không' },
+		  { name: 'Inverter', unit: 'Mode', value: 'Không' },
 		  // Thêm các thông số khác
 		]
 	},
@@ -322,6 +322,7 @@ var productSpecs = [
 		  { name: 'Công suất tiêu thụ điện', unit: 'W', value: '870 (220~1250)' },
 		  { name: 'Trọng lượng', unit: 'kg', value: '8' },
 		  { name: 'Cường độ Dòng điện', unit: 'A', value: '4.0 (1.0~6.0)' },
+		  { name: 'Inverter', unit: 'Mode', value: 'Có' },
 		  // Thêm các thông số khác
 		]
 	},
