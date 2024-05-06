@@ -154,6 +154,7 @@ function capNhatLabel() {
   var quantity = document.getElementById('soLuongDuKien').value;
   var price = document.getElementById('giaMuaDuKien').value;
   var term = document.getElementById('kyHanThue').value;
+  var priceTotal = price*quantity; 
  
   // Giả sử bạn đã có productSelect là phần tử <select> của bạn
   var productSelect = document.getElementById('productInput').value;
@@ -164,7 +165,11 @@ function capNhatLabel() {
  
   document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
   
+  document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua vào dự kiến:</strong> ' + priceTotal;
+  
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
+  
+
 
 
   // Hiển thị info-box nếu tất cả các trường đều có giá trị
