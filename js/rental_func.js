@@ -171,11 +171,11 @@ function capNhatLabel() {
   document.getElementById('selectedQuantity').innerHTML = '<strong>Số lượng bạn đã chọn:</strong> ' + quantityLabel;
  
   //document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price;
-  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price.toLocaleString('vi-VN') + ' VND';
+  document.getElementById('selectedPrice').innerHTML = '<strong>Đơn giá mua vào dự kiến:</strong> ' + price.toLocaleString('en-US') + ' VND';
   
   document.getElementById('selectedTerm').innerHTML = '<strong>Kỳ hạn thuê bạn đã chọn:</strong> ' + term;
   
-  document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua dự kiến (Đơn giá x Số lượng): </strong>' + priceTotal.toLocaleString('vi-VN') + ' VND';
+  document.getElementById('selectedPriceTotal').innerHTML = '<strong>Tổng giá mua dự kiến (Đơn giá x Số lượng): </strong>' + priceTotal.toLocaleString('en-US') + ' VND';
   
   
 
