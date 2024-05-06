@@ -151,14 +151,13 @@ function capNhatLabel() {
 	// bat dau cho ham chon tu dropdownlist 
 	// Lấy giá trị từ các trường input và dropdownlist
   var product = document.getElementById('productInput').value;
-  //var quantity = document.getElementById('soLuongDuKien').value;
-  var price = document.getElementById('giaMuaDuKien').value;
-  
-  var quantity = parseInt(document.getElementById('soLuongDuKien').value, 10);  // Chuyển đổi sang số nguyên
-  //var pricetemp = parseFloat(document.getElementById('giaMuaDuKien').value);  // Chuyển đổi sang số thực
-  
-  //var quantity = parseInt(document.getElementById('soLuongDuKien').value.replace(/,/g, ''), 10); // Xóa dấu phẩy và chuyển đổi sang số nguyên
-  var pricetemp = parseFloat(document.getElementById('giaMuaDuKien').value.replace(/,/g, '')); // Xóa dấu phẩy và chuyển đổi sang số thực
+  var quantityString = document.getElementById('soLuongDuKien').value.replace(/,/g, ''); // Xóa dấu phẩy và chuẩn bị chuyển đổi sang số
+  var priceString = document.getElementById('giaMuaDuKien').value.replace(/,/g, ''); // Xóa dấu phẩy và chuẩn bị chuyển đổi sang số
+
+   // Chuyển đổi chuỗi đã xử lý thành số nguyên và số thực
+  var quantity = parseInt(quantityString, 10); // Chuyển đổi sang số nguyên
+  var pricetemp = parseFloat(priceString); // Chuyển đổi sang số thực
+
 
   var term = document.getElementById('kyHanThue').value;
   var priceTotal = pricetemp*quantity; 
